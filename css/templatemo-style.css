@@ -1017,13 +1017,13 @@ http://www.templatemo.com/tm-509-hydro
     }
   }
 
-  @media (min-width: 768px){
+  /* @media (min-width: 768px){
     #projects .col-sm-6,
     #projects .col-md-4,
     #projects col-lg-4 {
       float: inherit;
     }
-  }
+  } */
   @media screen and (max-width: 767px) {
     #home{
           
