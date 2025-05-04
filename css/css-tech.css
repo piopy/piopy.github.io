@@ -59,3 +59,50 @@
     font-size: 12px;
     color: #555;
 }
+
+
+
+
+/* Per dispositivi mobili */
+@media screen and (max-width: 767px) {
+    /* Nascondi i box su dispositivi mobili */
+    .tech-scroll-container {
+        display: none;
+    }
+
+    /* Mostra la lista puntata su dispositivi mobili */
+    .tech-list {
+        display: block;
+        list-style-type: disc;  /* Imposta un elenco puntato */
+        padding-left: 20px;  /* Spazio a sinistra */
+        text-align: left;  /* Allinea a sinistra */
+    }
+
+    .tech-list li {
+        margin-bottom: 10px;  /* Spazio tra gli elementi della lista */
+        font-size: 16px;
+    }
+}
+
+/* Rendi visibili i box su dispositivi più grandi (default desktop/tablet) */
+@media screen and (min-width: 768px) {
+    .tech-scroll-container {
+        display: block;
+    }
+
+    .tech-list {
+        display: none;  /* Nascondi la lista sui dispositivi più grandi */
+    }
+}
+
+.tech-list {
+    list-style-type: disc; /* Aggiungi i punti */
+    padding-left: 20px; /* Spazio a sinistra */
+    font-size: 14px; /* Imposta una dimensione del font */
+    text-align: left; /* Allinea il testo a sinistra */
+    margin-top: 20px; /* Un po' di margine sopra la lista */
+}
+
+#technologies .tech-scroll-container {
+    display: block; /* Assicurati che sia visibile */
+}
