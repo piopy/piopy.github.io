@@ -1,93 +1,107 @@
 const projects = [
   {
-      name: "CCVA",
-      year: 2016,
-      description: "Encrypt files with password and hide them into other files",
-      link: "https://github.com/piopy/ccva",
-      image: "images/github-projects.png"
+    name: "CCVA",
+    year: 2016,
+    description: "Encrypt files with password and hide them into other files",
+    link: "https://github.com/piopy/ccva",
+    image: "images/github-projects.png"
   },
   {
-      name: "pio-bot",
-      year: 2021,
-      description: "Chatterbot telegram with lots of functions (includes scrapers)",
-      link: "https://github.com/piopy/pio-bot",
-      image: "images/github-projects.png"
+    name: "pio-bot",
+    year: 2021,
+    description: "Chatterbot telegram with lots of functions (includes scrapers)",
+    link: "https://github.com/piopy/pio-bot",
+    image: "images/github-projects.png"
   },
   {
-      name: "SoleXIV",
-      year: 2023,
-      description: "Budget management using python",
-      link: "https://github.com/piopy/solexiv",
-      image: "images/github-projects.png"
+    name: "SoleXIV",
+    year: 2023,
+    description: "Budget management using python",
+    link: "https://github.com/piopy/solexiv",
+    image: "images/github-projects.png"
   },
   {
-      name: "adcatch",
-      year: 2017,
-      description: "Ad-blocker for Windows",
-      link: "https://github.com/piopy/adcatch",
-      image: "images/github-projects.png"
+    name: "adcatch",
+    year: 2017,
+    description: "Ad-blocker for Windows",
+    link: "https://github.com/piopy/adcatch",
+    image: "images/github-projects.png"
   },
   {
-      name: "instaWiper",
-      year: 2021,
-      description: "Fast instagram post archiver / eraser",
-      link: "https://github.com/piopy/instaWiper",
-      image: "images/github-projects.png"
-  },
-  // {
-  //     name: "Ukrainian IPTV",
-  //     year: 2022,
-  //     description: "Website to help Ukrainian refugee to stay updated with their TV channels",
-  //     link: "https://ukrainiantv.herokuapp.com/",
-  //     image: "images/web.png"
-  // },
-  {
-      name: "HaNAO-Tower",
-      year: 2021,
-      description: "University project - Teaching a NAO robot playing tower of Hanoi using two ML algorithms",
-      link: "https://github.com/piopy/HaNAO-Tower",
-      image: "images/github-projects.png"
+    name: "instaWiper",
+    year: 2021,
+    description: "Fast instagram post archiver / eraser",
+    link: "https://github.com/piopy/instaWiper",
+    image: "images/github-projects.png"
   },
   {
-      name: "fantacalcio-py",
-      year: 2021,
-      description: "Manipulation of datasets applied to Italian fantasy football",
-      link: "https://github.com/piopy/fantacalcio-py",
-      image: "images/github-projects.png"
+    name: "HaNAO-Tower",
+    year: 2021,
+    description: "University project - Teaching a NAO robot playing tower of Hanoi using two ML algorithms",
+    link: "https://github.com/piopy/HaNAO-Tower",
+    image: "images/github-projects.png"
   },
   {
-      name: "SimpleAES",
-      year: 2016,
-      description: "Crypt files with password (AES256)",
-      link: "https://github.com/piopy/SimpleAES",
-      image: "images/github-projects.png"
+    name: "fantacalcio-py",
+    year: 2021,
+    description: "Manipulation of datasets applied to Italian fantasy football",
+    link: "https://github.com/piopy/fantacalcio-py",
+    image: "images/github-projects.png"
   },
-  // {
-  //     name: "Pz8",
-  //     year: 2022,
-  //     description: "Global and Legal IPTV website (user: utente, password: piopy)",
-  //     link: "http://merendinechepassione.herokuapp.com/login/login.php",
-  //     image: "images/web.png"
-  // },
   {
-      name: "CCVpy",
-      year: 2022,
-      description: "Encrypt files with password and hide them into other files using python (AES256 enc.)",
-      link: "https://github.com/piopy/ccvpy",
-      image: "images/github-projects.png"
+    name: "SimpleAES",
+    year: 2016,
+    description: "Crypt files with password (AES256)",
+    link: "https://github.com/piopy/SimpleAES",
+    image: "images/github-projects.png"
+  },
+  {
+    name: "Pz8 (offline)",
+    year: 2022,
+    description: "Global and Legal IPTV website (username: utente, password: piopy). Currently offline due to Heroku's new policy on free hosting hours.",
+    link: "https://youtu.be/pFptt7Cargc",
+    image: "images/web.png"
+  },
+  {
+    name: "CCVpy",
+    year: 2022,
+    description: "Encrypt files with password and hide them into other files using python (AES256 enc.)",
+    link: "https://github.com/piopy/ccvpy",
+    image: "images/github-projects.png"
+  },
+  {
+    name: "PFN (Collaboration)",
+    year: 2024,
+    description: "A web app to produce near-real-time statistics on your investment portfolio",
+    link: "https://github.com/viventriglia/personal-finance-for-newbies",
+    image: "images/github-projects.png"
+  },
+  {
+    name: "Wallpaper-map-generator",
+    year: 2024,
+    description: "Using streamlit + prettymap to generate wallpapers of your city",
+    link: "https://github.com/piopy/wallpaper-map-generator",
+    image: "images/github-projects.png"
+  },
+  {
+    name: "TBD",
+    year: 2024,
+    description: "TBD",
+    link: "https://github.com/piopy/",
+    image: "images/github-projects.png"
   }
 ];
 
 // Funzione per generare dinamicamente i progetti
 function populateProjects() {
   const container = document.getElementById("projects-container");
-  
+
   // Pulisce il contenitore prima di aggiungere i progetti
   container.innerHTML = "";
 
   // Itera su ogni progetto e aggiunge la struttura HTML al contenitore
   projects.forEach(project => {
-      const projectHTML = `
+    const projectHTML = `
           <div class="col-md-4 col-sm-6 col-lg-4">
               <div class="media blog-thumb">
                   <div class="media-object media-left" style="max-height: 250px;">
@@ -103,9 +117,9 @@ function populateProjects() {
               </div>
           </div>
       `;
-      
-      // Aggiunge il nuovo progetto al contenitore
-      container.innerHTML += projectHTML;
+
+    // Aggiunge il nuovo progetto al contenitore
+    container.innerHTML += projectHTML;
   });
 }
 
