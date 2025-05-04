@@ -722,7 +722,9 @@ http://www.templatemo.com/tm-509-hydro
     font-weight: 500;
   }
 
-
+  #contact p {
+      color: #ffffff;
+  }
 
   /*---------------------------------------
      FOOTER              
