@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Verifica se è mobile o no
     // const isMobile = window.innerWidth <= 1000;
-    const isMobile = window.matchMedia("(max-width: 1000px)").matches;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
     // console.log("Is Mobile:", isMobile); // Log per verificare se è mobile
 
     if (isMobile) {
