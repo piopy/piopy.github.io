@@ -228,13 +228,33 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-md-4 col-sm-4">
+                <!-- <div class="col-md-4 col-sm-4">
                     <div class="google-map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d182105.2771513688!2d11.34468!3d44.507063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd498e951c40b%3A0xa2e17c015ba49441!2sBologna%20BO!5e0!3m2!1sit!2sit!4v1650405242360!5m2!1sit!2sit"
                             allowfullscreen></iframe>
                     </div>
+                </div> -->
+                <div class="col-md-4 col-sm-4">
+                    <div class="google-map">
+                        <div id="map" style="height: 300px;"></div>
+                    </div>
                 </div>
+
+                <!-- Leaflet CSS e JS -->
+                <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+                <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                <script>
+                    var map = L.map('map').setView([44.4949, 11.3426], 13); // Bologna
+
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; OpenStreetMap contributors'
+                    }).addTo(map);
+
+                    L.marker([44.4949, 11.3426]).addTo(map)
+                        .bindPopup('Bologna')
+                        .openPopup();
+                </script>
             </div>
         </div>
     </section>
