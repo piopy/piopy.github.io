@@ -1062,6 +1062,10 @@ http://www.templatemo.com/tm-509-hydro
     background-color: #333; /* Add a dark-grey background on hover 
   } */
 
-  .leaflet-control-zoom .leaflet-bar .leaflet-control {
+  .leaflet-control-zoom  {
+    opacity: 0;
+  }
+
+  .leaflet-bottom  {
     opacity: 0;
   }
