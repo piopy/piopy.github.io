@@ -245,15 +245,21 @@
                 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
                 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
                 <script>
-                    var map = L.map('map').setView([44.4949, 11.3426], 13); // Bologna
+                    var map = L.map('map', { scrollWheelZoom: false }).setView([44.4949, 11.3426], 13);
 
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '&copy; OpenStreetMap contributors'
+                    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    //     attribution: '&copy; OpenStreetMap contributors'
+                    // }).addTo(map);
+
+                    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                        attribution: '&copy; OpenStreetMap & CartoDB',
+                        subdomains: 'abcd',
+                        maxZoom: 19
                     }).addTo(map);
 
-                    L.marker([44.4949, 11.3426]).addTo(map)
-                        .bindPopup('Bologna')
-                        .openPopup();
+                    // L.marker([44.4949, 11.3426]).addTo(map)
+                    //     .bindPopup('Bologna')
+                    //     .openPopup();
                 </script>
             </div>
         </div>
