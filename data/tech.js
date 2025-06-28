@@ -79,6 +79,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             container.appendChild(inner);
 
+            // Aggiunta delle frecce indicative per la vista desktop
+            const leftArrow = document.createElement("div");
+            leftArrow.className = "scroll-arrow left-arrow";
+            leftArrow.innerHTML = `&larr;`; // Freccia sinistra
+
+            const rightArrow = document.createElement("div");
+            rightArrow.className = "scroll-arrow right-arrow";
+            rightArrow.innerHTML = `&rarr;`; // Freccia destra
+
+            container.appendChild(leftArrow);
+            container.appendChild(rightArrow);
+
             inner.style.animation = "none";
             inner.style.transform = "translateX(0)";
 
