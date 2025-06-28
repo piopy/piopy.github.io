@@ -2,6 +2,7 @@
     overflow: hidden;
     position: relative;
     padding: 20px 0;
+    min-height: 190px; /* Previene il collasso del contenitore */
 }
 
 .tech-scroll-inner {
@@ -117,7 +118,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
     .tech-scroll-container {
         /* Effetto fade ai lati per un look più pulito */
         -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);

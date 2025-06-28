@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Pulisce il contenitore per ricreare il contenuto
         container.innerHTML = '';
 
-        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        const isMobile = window.matchMedia("(max-width: 991px)").matches;
 
         if (isMobile) {
             // --- VISTA MOBILE: Carosello infinito animato con CSS ---
