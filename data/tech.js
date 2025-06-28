@@ -112,11 +112,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     scrollSpeed = 0;
                 }
 
+                // Gestione della visibilità delle frecce
+                leftArrow.style.visibility = (scrollAmount >= maxScrollLimit - 1) ? 'hidden' : 'visible';
+                leftArrow.style.opacity = (scrollAmount >= maxScrollLimit - 1) ? '0' : '1';
+                rightArrow.style.visibility = (scrollAmount <= minScrollLimit + 1) ? 'hidden' : 'visible';
+                rightArrow.style.opacity = (scrollAmount <= minScrollLimit + 1) ? '0' : '1';
+
                 inner.style.transform = `translateX(${scrollAmount}px)`;
                 req = requestAnimationFrame(scroll);
             };
 
+            leftArrow.style.opacity = '0';
+            rightArrow.style.opacity = '0';
+
             container.addEventListener("mouseenter", () => {
+                // Mostra le frecce solo se non si è già ai limiti
+                if (scrollAmount < maxScrollLimit - 1) {
+                    leftArrow.style.opacity = '1';
+                }
+                if (scrollAmount > minScrollLimit + 1) {
+                    rightArrow.style.opacity = '1';
+                }
+
                 cancelAnimationFrame(req);
                 req = requestAnimationFrame(scroll);
             });
@@ -130,6 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             container.addEventListener("mouseleave", () => {
+                leftArrow.style.opacity = '0';
+                rightArrow.style.opacity = '0';
                 cancelAnimationFrame(req);
                 scrollSpeed = 0;
             });

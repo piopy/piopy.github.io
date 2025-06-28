@@ -77,7 +77,10 @@
     z-index: 10;
     /* Animazione per attirare l'attenzione */
     animation: pulse-arrows 2.5s infinite ease-in-out;
+    user-select: none;
 }
+
+
 
 .left-arrow {
     left: 15px;
