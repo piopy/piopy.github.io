@@ -23,96 +23,108 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const container = document.querySelector("#technologies .tech-scroll-container");
 
-    // Verifica se il contenitore è stato selezionato correttamente
     if (!container) {
         console.error("Contenitore non trovato!");
         return;
     }
 
-    // Verifica se è mobile o no
-    // const isMobile = window.innerWidth <= 1000;
-    const isMobile = window.matchMedia("(max-width: 767px)").matches;
-    // console.log("Is Mobile:", isMobile); // Log per verificare se è mobile
-
-    if (isMobile) {
-        // Se siamo su dispositivi mobili, creiamo una lista puntata
-        const list = document.createElement("ul");
-        list.className = "tech-list"; // Classe per la lista su mobile
-
-        techList.forEach(tech => {
-            const listItem = document.createElement("li");
-            listItem.innerHTML = `${tech.name}: ${tech.description}`;
-            list.appendChild(listItem);
-            
-            // console.log("Item aggiunto:", listItem);
-        });
-
-        container.appendChild(list);
-    } else {
-        // Se non siamo su dispositivi mobili, mostra i box con lo scroll infinito
-        const inner = document.createElement("div");
-        inner.className = "tech-scroll-inner";
-
-        // Crea i box con le tecnologie
-        techList.forEach(tech => {
-            const box = document.createElement("div");
-            box.className = "tech-box";
-            box.innerHTML = `<img src="${tech.icon}" alt="${tech.name}"><span>${tech.name}</span><p>${tech.description}</p>`;
-            inner.appendChild(box);
-        });
-
-        container.appendChild(inner);
-
-        // Stop default animation
-        inner.style.animation = "none";
-        inner.style.transform = "translateX(0)";
-
-        let scrollAmount = 0;
-        let scrollSpeed = 0;
-        let req;
-
-        // Calcola i limiti dello scroll
-        const minScrollLimit = -(inner.scrollWidth - container.offsetWidth + 100);
-        const maxScrollLimit = 100; // Un piccolo margine positivo
-
-        const scroll = () => {
-            // Aggiorna la posizione di scroll
-            scrollAmount += scrollSpeed;
-
-            // Limita lo scroll per non andare oltre i limiti
-            if (scrollAmount > maxScrollLimit) {
-                scrollAmount = maxScrollLimit;
-                scrollSpeed = 0; // Ferma lo scroll quando raggiunge il limite destro
-            } else if (scrollAmount < minScrollLimit) {
-                scrollAmount = minScrollLimit;
-                scrollSpeed = 0; // Ferma lo scroll quando raggiunge il limite sinistro
-            }
-
-            // Applica la trasformazione
-            inner.style.transform = `translateX(${scrollAmount}px)`;
-
-            req = requestAnimationFrame(scroll);
+    // Funzione di debounce per ottimizzare il ridimensionamento della finestra
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
         };
-
-        container.addEventListener("mouseenter", () => {
-            // Avvia l'animazione quando il mouse entra
-            cancelAnimationFrame(req); // Previene animazioni multiple
-            req = requestAnimationFrame(scroll);
-        });
-
-        container.addEventListener("mousemove", (e) => {
-            const rect = container.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const middle = rect.width / 2;
-            const maxSpeed = 25;
-
-            // Mantieni la logica originale: se il mouse è a destra, scrolla verso sinistra e viceversa
-            scrollSpeed = (middle - x) / middle * maxSpeed;
-        });
-
-        container.addEventListener("mouseleave", () => {
-            cancelAnimationFrame(req);
-            scrollSpeed = 0;
-        });
     }
+
+    // Funzione che costruisce la sezione in base alla dimensione dello schermo
+    function setupTechnologies() {
+        // Pulisce il contenitore per ricreare il contenuto
+        container.innerHTML = '';
+
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+        if (isMobile) {
+            // --- VISTA MOBILE: Carosello infinito animato con CSS ---
+            const inner = document.createElement("div");
+            inner.className = "tech-scroll-inner mobile-carousel";
+
+            // Duplica la lista di tecnologie per creare un loop fluido
+            const duplicatedTechs = [...techList, ...techList];
+
+            duplicatedTechs.forEach(tech => {
+                const box = document.createElement("div");
+                box.className = "tech-box";
+                // Per mobile, mostriamo solo icona e nome per un look più pulito
+                box.innerHTML = `<img src="${tech.icon}" alt="${tech.name}"><span>${tech.name}</span>`;
+                inner.appendChild(box);
+            });
+
+            container.appendChild(inner);
+        } else {
+            // --- VISTA DESKTOP: Scroll interattivo con il mouse (logica originale) ---
+            const inner = document.createElement("div");
+            inner.className = "tech-scroll-inner";
+
+            techList.forEach(tech => {
+                const box = document.createElement("div");
+                box.className = "tech-box";
+                box.innerHTML = `<img src="${tech.icon}" alt="${tech.name}"><span>${tech.name}</span><p>${tech.description}</p>`;
+                inner.appendChild(box);
+            });
+
+            container.appendChild(inner);
+
+            inner.style.animation = "none";
+            inner.style.transform = "translateX(0)";
+
+            let scrollAmount = 0;
+            let scrollSpeed = 0;
+            let req;
+
+            const minScrollLimit = -(inner.scrollWidth - container.offsetWidth + 100);
+            const maxScrollLimit = 100;
+
+            const scroll = () => {
+                scrollAmount += scrollSpeed;
+
+                if (scrollAmount > maxScrollLimit) {
+                    scrollAmount = maxScrollLimit;
+                    scrollSpeed = 0;
+                } else if (scrollAmount < minScrollLimit) {
+                    scrollAmount = minScrollLimit;
+                    scrollSpeed = 0;
+                }
+
+                inner.style.transform = `translateX(${scrollAmount}px)`;
+                req = requestAnimationFrame(scroll);
+            };
+
+            container.addEventListener("mouseenter", () => {
+                cancelAnimationFrame(req);
+                req = requestAnimationFrame(scroll);
+            });
+
+            container.addEventListener("mousemove", (e) => {
+                const rect = container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const middle = rect.width / 2;
+                const maxSpeed = 25;
+                scrollSpeed = (middle - x) / middle * maxSpeed;
+            });
+
+            container.addEventListener("mouseleave", () => {
+                cancelAnimationFrame(req);
+                scrollSpeed = 0;
+            });
+        }
+    }
+
+    // Esegue la funzione al caricamento e la ri-esegue al ridimensionamento della finestra
+    setupTechnologies();
+    window.addEventListener('resize', debounce(setupTechnologies, 250));
 });

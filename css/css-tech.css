@@ -6,15 +6,12 @@
 
 .tech-scroll-inner {
     display: flex;
-    width: max-content;
-    animation: scrollTech 30s linear infinite;
+    width: max-content; /* Calcolato automaticamente in base al contenuto */
+    /* L'animazione per desktop viene disabilitata da JS */
+    animation: scrollDesktop 30s linear infinite;
 }
 
-.tech-scroll-container:hover .tech-scroll-inner {
-    animation-play-state: paused;
-}
-
-@keyframes scrollTech {
+@keyframes scrollDesktop {
     0% {
         transform: translateX(0);
     }
@@ -60,49 +57,33 @@
     color: #555;
 }
 
+/* --- Stili per il carosello mobile --- */
 
+@keyframes scrollMobile {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Scorre esattamente della metà, dato che il contenuto è duplicato */
+        transform: translateX(-50%);
+    }
+}
 
-
-/* Per dispositivi mobili */
 @media screen and (max-width: 767px) {
-    /* Nascondi i box su dispositivi mobili */
     .tech-scroll-container {
-        display: none;
+        /* Effetto fade ai lati per un look più pulito */
+        -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
     }
 
-    /* Mostra la lista puntata su dispositivi mobili */
-    .tech-list {
-        display: block;
-        list-style-type: disc;  /* Imposta un elenco puntato */
-        padding-left: 20px;  /* Spazio a sinistra */
-        text-align: left;  /* Allinea a sinistra */
+    .tech-scroll-inner.mobile-carousel {
+        /* Applica l'animazione di scorrimento infinita */
+        animation: scrollMobile 40s linear infinite;
     }
 
-    .tech-list li {
-        margin-bottom: 10px;  /* Spazio tra gli elementi della lista */
-        font-size: 16px;
+    /* Mette in pausa l'animazione al tocco o al passaggio del mouse */
+    .tech-scroll-container:hover .mobile-carousel,
+    .tech-scroll-container:focus-within .mobile-carousel {
+        animation-play-state: paused;
     }
-}
-
-/* Rendi visibili i box su dispositivi più grandi (default desktop/tablet) */
-@media screen and (min-width: 768px) {
-    .tech-scroll-container {
-        display: block;
-    }
-
-    .tech-list {
-        display: none;  /* Nascondi la lista sui dispositivi più grandi */
-    }
-}
-
-.tech-list {
-    list-style-type: disc; /* Aggiungi i punti */
-    padding-left: 20px; /* Spazio a sinistra */
-    font-size: 14px; /* Imposta una dimensione del font */
-    text-align: left; /* Allinea il testo a sinistra */
-    margin-top: 20px; /* Un po' di margine sopra la lista */
-}
-
-#technologies .tech-scroll-container {
-    display: block; /* Assicurati che sia visibile */
 }
