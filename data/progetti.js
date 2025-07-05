@@ -102,7 +102,7 @@ function populateProjects() {
   // Itera su ogni progetto e aggiunge la struttura HTML al contenitore
   projects.forEach(project => {
     const projectHTML = `
-          <div class="col-md-4 col-sm-6 col-lg-4">
+          <div class="col-md-4 col-sm-12 col-lg-4">
               <div class="media blog-thumb">
                   <div class="media-object media-left" style="max-height: 250px;">
                       <a href="${project.link}" target="_blank">
