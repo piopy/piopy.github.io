@@ -140,7 +140,21 @@ body.dark-mode #myBtn {
     color: #121212;
 }
 
+/* --- Github stats --- */
+body.dark-mode #github-stats-1 {
+  filter: invert(0.9);
+}
+body.dark-mode #github-stats-2 {
+  filter: invert(0.9);
+}
+
 /* --- Map --- */
+/* Invert map colors for light/dark mode */
+#map {
+  filter: invert(1);
+}
+
+
 body.dark-mode .leaflet-tile-pane {
     filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);
 }
