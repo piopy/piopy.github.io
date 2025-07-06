@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const box = document.createElement("div");
                 box.className = "tech-box";
                 // Per mobile, mostriamo solo icona e nome per un look più pulito
-                box.innerHTML = `<img src="${tech.icon}" alt="${tech.name}"><span>${tech.name}</span>`;
+                box.innerHTML = `<img src="${tech.icon}" alt="${tech.name}"><span>${tech.name}</span><p>${tech.description}</p>`;
                 inner.appendChild(box);
             });
 
