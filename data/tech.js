@@ -1,6 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Dati delle tecnologie
     const techList = [
+        { name: "Python", description: "", url: "https://www.python.org" ,icon: "images/tech/python.svg"},
+        { name: "GIT", description: "Version control system", url: "https://git-scm.com" ,icon: "images/tech/git.svg"},
+        { name: "Docker [compose]", description: "Containerized application platform", url: "https://www.docker.com" ,icon: "images/tech/docker.svg"},
+        { name: "Terraform", description: "Infrastructure as code", url: "https://www.terraform.io" ,icon: "images/tech/terraform.svg"},
+        { name: "Dagster", description: "Data orchestration framework", url: "https://dagster.io" ,icon: "images/tech/dagster.png"},
+        { name: "FastAPI", description: "High-performance API framework", url: "https://fastapi.tiangolo.com" ,icon: "images/tech/fastapi.svg"},
+        { name: "Taipy", description: "Data HTML apps for Python", url: "https://www.taipy.io" ,icon: "images/tech/taipy.svg"},
+        { name: "Streamlit", description: "Data HTML apps for Python", url: "https://streamlit.io" ,icon: "images/tech/streamlit.svg"},
+        { name: "Pandas", description: "Data analysis library", url: "https://pandas.pydata.org" ,icon: "images/tech/pandas.svg"},
+        { name: "AWS", description: "Cloud computing platform", url: "https://aws.amazon.com" ,icon: "images/tech/aws.svg"},
+        { name: "PostgreSQL", description: "Advanced SQL database", url: "https://www.postgresql.org" ,icon: "images/tech/postgresql.svg"},
+        { name: "MongoDB", description: "NoSQL document database", url: "https://www.mongodb.com" ,icon: "images/tech/mongodb.svg"},
+        { name: "Various LLMs", description: "Open & closed-source language models", url: "https://huggingface.co" ,icon: "images/tech/huggingface.svg"},
+        { name: "Slack", description: "Team communication tool", url: "https://slack.com" ,icon: "images/tech/slack.svg"},
+        { name: "Linux", description: "Open-source OS", url: "https://www.kernel.org" ,icon: "images/tech/linux.svg"},
+        { name: "Bash", description: "Shell scripting language", url: "https://www.gnu.org/software/bash/" ,icon: "images/tech/bash.svg"},
+        { name: "Windows", description: "Operating system by Microsoft", url: "https://www.microsoft.com/windows" ,icon: "images/tech/windows.svg"},
+        { name: "GCP (Currently learning)", description: "Cloud computing platform", url: "https://cloud.google.com",icon: "images/tech/gcp.svg" }
+    ];
+
+    const techList_old = [
         { name: "Python", description: "", icon: "images/tech/python.svg" },
         { name: "GIT", description: "Version control system", icon: "images/tech/git.svg" },
         { name: "Docker [compose]", description: "Containerized application platform", icon: "images/tech/docker.svg" },
@@ -60,7 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 const box = document.createElement("div");
                 box.className = "tech-box";
                 // Per mobile, mostriamo solo icona e nome per un look più pulito
-                box.innerHTML = `<img src="${tech.icon}" alt="${tech.name}"><span>${tech.name}</span><p>${tech.description}</p>`;
+                box.innerHTML = `
+                    <a href="${tech.url}" target="_blank" rel="noopener noreferrer">
+                        <img src="${tech.icon}" alt="${tech.name}"><br><span>${tech.name}</span><p>${tech.description}</p>
+                    </a>
+                `;
                 inner.appendChild(box);
             });
 
@@ -73,7 +98,11 @@ document.addEventListener("DOMContentLoaded", function () {
             techList.forEach(tech => {
                 const box = document.createElement("div");
                 box.className = "tech-box";
-                box.innerHTML = `<img src="${tech.icon}" alt="${tech.name}"><span>${tech.name}</span><p>${tech.description}</p>`;
+                box.innerHTML = `
+                    <a href="${tech.url}" target="_blank" rel="noopener noreferrer">
+                        <img src="${tech.icon}" alt="${tech.name}"><br><span>${tech.name}</span><p>${tech.description}</p>
+                    </a>
+                `;
                 inner.appendChild(box);
             });
 
