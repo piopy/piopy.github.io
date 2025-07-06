@@ -84,8 +84,15 @@ const projects = [
     image: "images/github-projects.png"
   },
   {
+    name: "oops-i-did-it-again-setup",
+    year: 2025,
+    description: "For when you 'accidentally' format your Linux. Instantly restores VS Code, Docker, Spotify & your sanity.",
+    link: "https://github.com/piopy/oops-i-did-it-again-setup",
+    image: "images/github-projects.png"
+  },
+  {
     name: "TBD",
-    year: 2024,
+    year: 2025,
     description: "TBD",
     link: "https://github.com/piopy/",
     image: "images/github-projects.png"
