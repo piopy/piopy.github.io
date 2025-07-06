@@ -31,7 +31,8 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    padding-top: 10px;
     flex-direction: column;
     margin-right: 20px;
     transition: transform 0.2s ease;
@@ -42,7 +43,7 @@
 }
 
 .tech-box img {
-    max-height: 60px;
+    max-height: 50px;
     margin-bottom: 10px;
 }
 
@@ -56,6 +57,7 @@
     text-align: center;
     font-size: 12px;
     color: #555;
+    line-height: 16px !important;
 }
 
 /* --- Stili per le frecce di scorrimento (Solo Desktop) --- */
@@ -140,6 +142,8 @@
     .scroll-arrow {
         display: none;
     }
+
+
 
     /* .tech-box {
         flex: 0 0 auto;
