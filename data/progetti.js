@@ -103,13 +103,13 @@ function populateProjects() {
   projects.forEach((project, index) => {
     const projectHTML = `
           <div class="col-md-4 col-sm-6 col-lg-4">
-              <div class="media blog-thumb">
-                  <div class="media-object media-left" style="max-height: 250px;">
+              <div class="project-card">
+                  <div class="project-image">
                       <a href="${project.link}" target="_blank">
-                          <img src="${project.image}" class="img-responsive" alt="${project.name}" style="margin-top: 74px;">
+                          <img src="${project.image}" class="img-responsive" alt="${project.name}">
                       </a>
                   </div>
-                  <div class="media-body blog-info">
+                  <div class="project-details">
                       <small><i class="fa fa-clock-o"></i> ${project.year} </small>
                       <h3><a href="${project.link}" target="_blank">${project.name}</a></h3>
                       <p>${project.description}</p>

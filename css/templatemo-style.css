@@ -164,9 +164,65 @@ section {
 }
 
 
-/*---------------------------------------
-       PRE LOADER              
-  -----------------------------------------*/
+/* PROJECTS IMG */
+#projects .media-object {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#projects .media-object img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: inline-block;
+}
+
+/* PROJECTS IMG */
+.project-card {
+  background: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+  text-align: center;
+  height: 400px;
+}
+
+.project-image {
+  margin-bottom: 20px;
+}
+
+.project-image img {
+  max-width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.project-details h3 {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .project-card {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .media.blog-thumb .media-left {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .media.blog-thumb .media-body {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+/* -- HIDE PRELOADER -- */
 
 .preloader {
   position: fixed;
