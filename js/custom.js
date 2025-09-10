@@ -58,7 +58,7 @@
 
     // SMOOTH SCROLL
     $(function() {
-      $('.custom-navbar a, #home a').on('click', function(event) {
+      $('.custom-navbar a:not(#dark-mode-toggle), #home a').on('click', function(event) {
         var $anchor = $(this);
           $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top - 49
@@ -66,5 +66,36 @@
             event.preventDefault();
       });
     });  
+
+    // DARK MODE
+    $(function() {
+        const darkModeToggle = $('#dark-mode-toggle');
+        const body = $('body');
+        const moonIcon = 'fa-moon-o';
+        const sunIcon = 'fa-sun-o';
+
+        // Funzione per applicare il tema
+        function applyTheme(isDarkMode) {
+            if (isDarkMode) {
+                body.addClass('dark-mode');
+                darkModeToggle.find('i').removeClass(moonIcon).addClass(sunIcon);
+            } else {
+                body.removeClass('dark-mode');
+                darkModeToggle.find('i').removeClass(sunIcon).addClass(moonIcon);
+            }
+        }
+
+        // Controlla il localStorage al caricamento della pagina
+        let isDarkMode = localStorage.getItem('darkMode') === 'true';
+        applyTheme(isDarkMode);
+
+        // Gestisce il click sul pulsante
+        darkModeToggle.on('click', function(e) {
+            e.preventDefault();
+            isDarkMode = !isDarkMode;
+            localStorage.setItem('darkMode', isDarkMode);
+            applyTheme(isDarkMode);
+        });
+    });
 
 })(jQuery);

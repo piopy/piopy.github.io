@@ -1,0 +1,165 @@
+/*
+============================================
+            DARK MODE STYLES
+============================================
+*/
+
+/* --- General Body & Text Colors --- */
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode p {
+    color: #b0b0b0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #ffffff;
+}
+
+body.dark-mode a {
+    color: #e0e0e0;
+}
+
+body.dark-mode a:hover {
+    color: #ff9019;
+}
+
+/* --- Preloader --- */
+body.dark-mode .preloader {
+    background: #121212;
+}
+
+body.dark-mode .spinner:before {
+    border: 1px solid #444;
+    border-top-color: #1E1E1E;
+}
+
+/* --- Navigation Bar --- */
+body.dark-mode .custom-navbar.top-nav-collapse {
+    background: #1E1E1E;
+    box-shadow: 0 1px 30px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .top-nav-collapse .navbar-brand {
+    color: #e0e0e0;
+}
+
+body.dark-mode .top-nav-collapse .navbar-brand::after {
+    background-color: #e0e0e0;
+}
+
+body.dark-mode .top-nav-collapse .nav li a {
+    color: #b0b0b0;
+}
+
+body.dark-mode .custom-navbar .navbar-toggle .icon-bar {
+    background: #e0e0e0;
+}
+
+/* --- Section Titles --- */
+body.dark-mode .section-title .line-bar {
+    color: #444;
+}
+
+/* --- Home Section --- */
+body.dark-mode #home .overlay {
+    background: #121212;
+    opacity: 0.8;
+}
+
+/* --- Cards & Boxes (Projects, Social, Tech) --- */
+body.dark-mode .project-card,
+body.dark-mode .social-profile-card,
+body.dark-mode .tech-box {
+    background-color: #2A2A2A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #444;
+}
+
+body.dark-mode .project-description,
+body.dark-mode .tech-box p {
+    color: #b0b0b0;
+}
+
+body.dark-mode .social-profile-name {
+    color: #e0e0e0;
+}
+
+/* --- Technologies Section Arrows --- */
+body.dark-mode #technologies .scroll-arrow {
+    background-color: rgba(42, 42, 42, 0.9);
+    color: #ff9019;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode #technologies .scroll-arrow:hover {
+    background-color: #2A2A2A;
+}
+
+/* --- Contact Section --- */
+body.dark-mode #contact {
+    background: #1E1E1E;
+}
+
+body.dark-mode #contact .section-title h2,
+body.dark-mode #contact p {
+    color: #ffffff;
+}
+
+body.dark-mode #contact .form-control {
+    background-color: #2A2A2A;
+    border: 1px solid #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode #contact .form-control::placeholder {
+    color: #888;
+}
+
+/* --- Footer --- */
+body.dark-mode footer {
+    background: #000000;
+}
+
+body.dark-mode footer p,
+body.dark-mode footer span,
+body.dark-mode .footer-link li a {
+    color: #a0a0a0;
+}
+
+/* --- Go to Top Button --- */
+body.dark-mode #myBtn {
+    background-color: #ff9019;
+    color: #121212;
+}
+
+/* --- Github stats --- */
+body.dark-mode #github-stats-1 {
+  filter: invert(0.9);
+}
+body.dark-mode #github-stats-2 {
+  filter: invert(0.9);
+}
+
+/* --- Map --- */
+/* Invert map colors for light/dark mode */
+#map {
+  filter: invert(1);
+}
+
+
+body.dark-mode .leaflet-tile-pane {
+    filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);
+}
+
+body.dark-mode .blog-thumb {
+    background: #2a2a2a;
+
+}

@@ -1,0 +1,162 @@
+.tech-scroll-container {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    min-height: 190px; /* Previene il collasso del contenitore */
+}
+
+.tech-scroll-inner {
+    display: flex;
+    width: max-content; /* Calcolato automaticamente in base al contenuto */
+    /* L'animazione per desktop viene disabilitata da JS */
+    animation: scrollDesktop 30s linear infinite;
+}
+
+@keyframes scrollDesktop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.tech-box {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 150px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding-top: 10px;
+    flex-direction: column;
+    margin-right: 20px;
+    transition: transform 0.2s ease;
+}
+
+.tech-box:hover {
+    transform: scale(1.05);
+}
+
+.tech-box img {
+    max-height: 50px;
+    margin-bottom: 10px;
+}
+
+.tech-box span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tech-box p {
+    margin: 5px 0 0;
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    line-height: 16px !important;
+}
+
+/* --- Stili per le frecce di scorrimento (Solo Desktop) --- */
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: default; /* Lo scroll è guidato dal mouse, non dal click */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 10;
+    /* Animazione per attirare l'attenzione */
+    animation: pulse-arrows 2.5s infinite ease-in-out;
+    user-select: none;
+}
+
+
+
+.left-arrow {
+    left: 15px;
+}
+
+.right-arrow {
+    right: 15px;
+}
+
+@keyframes pulse-arrows {
+    0% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translateY(-50%) scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0.1;
+    }
+}
+
+/* --- Stili per il carosello mobile --- */
+
+@keyframes scrollMobile {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Scorre esattamente della metà, dato che il contenuto è duplicato */
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .tech-scroll-container {
+        /* Effetto fade ai lati per un look più pulito */
+        -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    }
+
+    .tech-scroll-inner.mobile-carousel {
+        /* Applica l'animazione di scorrimento infinita */
+        animation: scrollMobile 40s linear infinite;
+    }
+
+    /* Mette in pausa l'animazione al tocco o al passaggio del mouse */
+    .tech-scroll-container:hover .mobile-carousel,
+    .tech-scroll-container:focus-within .mobile-carousel {
+        animation-play-state: paused;
+    }
+
+    /* Nasconde le frecce su mobile */
+    .scroll-arrow {
+        display: none;
+    }
+
+
+
+    /* .tech-box {
+        flex: 0 0 auto;
+        width: 150px;
+        height: 150px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 20px;
+        transition: transform 0.2s ease;
+    } */
+}
