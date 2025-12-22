@@ -91,17 +91,17 @@ const projects = [
     image: "images/github-projects.png"
   },
   {
-    name: "babilonia",
+    name: "domingo",
     year: 2025,
-    description: "FastAPI project that uses the Gemini API and the fact that calls are free to facilitate language learning through LLM",
-    link: "https://github.com/piopy/babilonia",
+    description: "[VIBE] FastAPI project that uses the Gemini API and the fact that calls are free to facilitate language learning through LLM",
+    link: "https://github.com/piopy/domingo",
     image: "images/github-projects.png"
   },
   {
-    name: "agentic-csv-analyzer",
+    name: "ceppa",
     year: 2025,
-    description: "Using LLMs to ask questions to CSVs in a controlled manner and with knowledge injected via JSON.",
-    link: "https://github.com/piopy/agentic-csv-analyzer/",
+    description: "[VIBE] Allows you to create guides in LateX by leveraging LLM knowledge.",
+    link: "https://github.com/piopy/ceppa/",
     image: "images/github-projects.png"
   },
   {
@@ -113,7 +113,7 @@ const projects = [
   },
   {
     name: "TBD",
-    year: 2025,
+    year: 2026,
     description: "TBD",
     link: "https://github.com/piopy/",
     image: "images/github-projects.png"

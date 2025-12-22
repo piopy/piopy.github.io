@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Linux", description: "Open-source OS", url: "https://www.kernel.org" ,icon: "images/tech/linux.svg"},
         { name: "Bash", description: "Shell scripting language", url: "https://www.gnu.org/software/bash/" ,icon: "images/tech/bash.svg"},
         { name: "Windows", description: "Operating system by Microsoft", url: "https://www.microsoft.com/windows" ,icon: "images/tech/windows.svg"},
-        { name: "GCP (Currently learning)", description: "Cloud computing platform", url: "https://cloud.google.com",icon: "images/tech/gcp.svg" }
+        { name: "GCP (Currently learning)", description: "Cloud computing platform", url: "https://cloud.google.com",icon: "images/tech/gcp.svg" },
+        { name: "Metabase (Currently learning)", description: "Open-source business intelligence and analytics platform", url: "https://www.metabase.com/",icon: "images/tech/metabase.svg" },
+        { name: "DBT (Currently learning)", description: "Engineering tool for transforming data in warehouses", url: "https://www.getdbt.com/",icon: "images/tech/dbt.svg" }
     ];
 
     const techList_old = [
