@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "FastAPI", description: "High-performance API framework", url: "https://fastapi.tiangolo.com" ,icon: "images/tech/fastapi.svg"},
         { name: "Taipy", description: "Data HTML apps for Python", url: "https://www.taipy.io" ,icon: "images/tech/taipy.svg"},
         { name: "Streamlit", description: "Data HTML apps for Python", url: "https://streamlit.io" ,icon: "images/tech/streamlit.svg"},
+        { name: "Jupyter", description: "Interactive environment for prototyping and EDA", url: "https://jupyter.org/" ,icon: "images/tech/jupyter.svg"},
         { name: "Pandas", description: "Data analysis library", url: "https://pandas.pydata.org" ,icon: "images/tech/pandas.svg"},
         { name: "AWS", description: "Cloud computing platform", url: "https://aws.amazon.com" ,icon: "images/tech/aws.svg"},
         { name: "PostgreSQL", description: "Advanced SQL database", url: "https://www.postgresql.org" ,icon: "images/tech/postgresql.svg"},
