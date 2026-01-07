@@ -100,7 +100,7 @@ const projects = [
   {
     name: "ceppa",
     year: 2025,
-    description: "[VIBE] Allows you to create guides in LateX by leveraging LLM knowledge.",
+    description: "[VIBE] E-learning app powered by LLM knowledge.",
     link: "https://github.com/piopy/ceppa/",
     image: "images/github-projects.png"
   },
