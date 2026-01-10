@@ -91,7 +91,7 @@ const projects = [
     image: "images/github-projects.png"
   },
   {
-    name: "promptmap-API",
+    name: "promptmap-API (Fork)",
     year: 2025,
     description: "A security scanner for custom LLM API",
     link: "https://github.com/piopy/promptmap-API",
