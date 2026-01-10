@@ -98,14 +98,14 @@ const projects = [
     image: "images/github-projects.png"
   },
   {
-    name: "domingo",
+    name: "Domingo [VIBE]",
     year: 2025,
     description: "[VIBE] FastAPI project that uses the Gemini API and the fact that calls are free to facilitate language learning through LLM",
     link: "https://github.com/piopy/domingo",
     image: "images/github-projects.png"
   },
   {
-    name: "ceppa",
+    name: "Ceppa [VIBE]",
     year: 2026,
     description: "[VIBE] E-learning app powered by LLM knowledge.",
     link: "https://github.com/piopy/ceppa/",
