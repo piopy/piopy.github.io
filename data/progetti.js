@@ -7,17 +7,10 @@ const projects = [
     image: "images/github-projects.png"
   },
   {
-    name: "pio-bot",
-    year: 2021,
-    description: "Chatterbot telegram with lots of functions (includes scrapers)",
-    link: "https://github.com/piopy/pio-bot",
-    image: "images/github-projects.png"
-  },
-  {
-    name: "SoleXIV",
-    year: 2023,
-    description: "Budget management using python",
-    link: "https://github.com/piopy/solexiv",
+    name: "SimpleAES",
+    year: 2016,
+    description: "Crypt files with password (AES256)",
+    link: "https://github.com/piopy/SimpleAES",
     image: "images/github-projects.png"
   },
   {
@@ -25,6 +18,13 @@ const projects = [
     year: 2017,
     description: "Ad-blocker for Windows",
     link: "https://github.com/piopy/adcatch",
+    image: "images/github-projects.png"
+  },
+  {
+    name: "pio-bot",
+    year: 2021,
+    description: "Chatterbot telegram with lots of functions (includes scrapers)",
+    link: "https://github.com/piopy/pio-bot",
     image: "images/github-projects.png"
   },
   {
@@ -49,13 +49,6 @@ const projects = [
     image: "images/github-projects.png"
   },
   {
-    name: "SimpleAES",
-    year: 2016,
-    description: "Crypt files with password (AES256)",
-    link: "https://github.com/piopy/SimpleAES",
-    image: "images/github-projects.png"
-  },
-  {
     name: "Pz8 (offline)",
     year: 2022,
     description: "Global and Legal IPTV website (username: utente, password: piopy). Currently offline due to Heroku's new policy on free hosting hours.",
@@ -70,7 +63,14 @@ const projects = [
     image: "images/github-projects.png"
   },
   {
-    name: "PFN (Collaboration)",
+    name: "SoleXIV",
+    year: 2023,
+    description: "Budget management using python",
+    link: "https://github.com/piopy/solexiv",
+    image: "images/github-projects.png"
+  },
+  {
+    name: "PFN [Collaboration]",
     year: 2024,
     description: "A web app to produce near-real-time statistics on your investment portfolio",
     link: "https://github.com/viventriglia/personal-finance-for-newbies",
@@ -91,33 +91,33 @@ const projects = [
     image: "images/github-projects.png"
   },
   {
-    name: "babilonia",
-    year: 2025,
-    description: "FastAPI project that uses the Gemini API and the fact that calls are free to facilitate language learning through LLM",
-    link: "https://github.com/piopy/babilonia",
-    image: "images/github-projects.png"
-  },
-  {
-    name: "agentic-csv-analyzer",
-    year: 2025,
-    description: "Using LLMs to ask questions to CSVs in a controlled manner and with knowledge injected via JSON.",
-    link: "https://github.com/piopy/agentic-csv-analyzer/",
-    image: "images/github-projects.png"
-  },
-  {
-    name: "promptmap-API",
+    name: "promptmap-API [Fork]",
     year: 2025,
     description: "A security scanner for custom LLM API",
     link: "https://github.com/piopy/promptmap-API",
     image: "images/github-projects.png"
   },
   {
-    name: "TBD",
+    name: "Domingo [VIBE]",
     year: 2025,
-    description: "TBD",
-    link: "https://github.com/piopy/",
+    description: "FastAPI project that uses the Gemini API and the fact that calls are free to facilitate language learning through LLM",
+    link: "https://github.com/piopy/domingo",
+    image: "images/github-projects.png"
+  },
+  {
+    name: "Ceppa [VIBE]",
+    year: 2026,
+    description: "E-learning app powered by LLM knowledge.",
+    link: "https://github.com/piopy/ceppa/",
     image: "images/github-projects.png"
   }
+  // {
+  //   name: "TBD",
+  //   year: 2026,
+  //   description: "TBD",
+  //   link: "https://github.com/piopy/",
+  //   image: "images/github-projects.png"
+  // }
 ];
 
 // Funzione per generare dinamicamente i progetti

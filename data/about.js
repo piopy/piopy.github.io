@@ -1,6 +1,7 @@
 
 const aboutMe = [
     { "icon": "fa fa-briefcase", "text": "Data Engineer @Zanichelli Ed." },
+    { "icon": "fa fa-spinner fa-spin", "text": "Focusing on Infrastructure as Code & Data Platform Engineering." },
     { "icon": "fa fa-map-marker", "text": "Based in Bologna." },
     { "icon": "fa fa-graduation-cap", "text": "Graduated in Computer Engineering (Master Degree)" },
     { "icon": "fa fa-code", "text": "Open source developer and chef for my roommates in the spare time" },
