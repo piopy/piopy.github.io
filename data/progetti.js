@@ -5,7 +5,7 @@ const projects = [
     description: "Encrypt files with password and hide them into other files",
     link: "https://github.com/piopy/ccva",
     image: "images/github-projects.png",
-    tags: ["C++", "Cryptography", "Security"]
+    tags: ["C#", "Cryptography", "Security"]
   },
   {
     name: "SimpleAES",
@@ -13,7 +13,7 @@ const projects = [
     description: "Crypt files with password (AES256)",
     link: "https://github.com/piopy/SimpleAES",
     image: "images/github-projects.png",
-    tags: ["C++", "AES", "Cryptography"]
+    tags: ["C#", "AES", "Cryptography"]
   },
   {
     name: "adcatch",
@@ -21,7 +21,7 @@ const projects = [
     description: "Ad-blocker for Windows",
     link: "https://github.com/piopy/adcatch",
     image: "images/github-projects.png",
-    tags: ["C++", "Windows", "Networking"]
+    tags: ["C#", "Windows", "Networking"]
   },
   {
     name: "pio-bot",
@@ -143,8 +143,8 @@ function populateProjects() {
   // Pulisce il contenitore prima di aggiungere i progetti
   container.innerHTML = "";
 
-  // Itera su ogni progetto e aggiunge la struttura HTML al contenitore
-  projects.forEach((project, index) => {
+  // Itera su ogni progetto in ordine inverso (dal più recente al più datato)
+  projects.slice().reverse().forEach((project, index) => {
     let tagsHTML = "";
     if (project.tags && project.tags.length > 0) {
       project.tags.forEach(tag => {

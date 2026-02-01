@@ -6,7 +6,7 @@ const workExperience = [
         period: "2023 - Present",
         location: "Bologna, Italy",
         accomplishments: [
-            "Template placeholder - work in progress"
+            // "Template placeholder - work in progress"
             // "Contributed to designing and implementing data models for analytics pipelines",
             // "Developed a Taipy-based frontend dashboard for internal data visualization",
             // "Implemented Infrastructure as Code solutions using Terraform for cloud resources",
