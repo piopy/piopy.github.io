@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/templatemo-style.css">
     <link rel="stylesheet" href="css/css-tech.css">
     <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/enhancements.css">
 
 </head>
 
@@ -47,21 +48,19 @@
                 <ul class="nav navbar-nav navbar-nav-first">
                     <li><a href="#home" class="smoothScroll">Home</a></li>
                     <li><a href="#bout" class="smoothScroll">About</a></li>
-                    <li><a href="#technologies" class="smoothScroll">Technologies I Use</a></li>
+                    <li><a href="#experience" class="smoothScroll">Experience</a></li>
+                    <li><a href="#technologies" class="smoothScroll">Technologies</a></li>
                     <li><a href="#projects" class="smoothScroll">Projects</a></li>
-                    <li><a href="#social" class="smoothScroll">Social</a></li>
-                    <li><a href="#contact" class="smoothScroll">Contacts</a></li>
+                    <li><a href="#articles" class="smoothScroll">Articles</a></li>
+                    <li><a href="#contact" class="smoothScroll">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#" id="dark-mode-toggle"><i class="fa fa-moon-o"></i></a></li>
-                    <li><a href="https://www.instagram.com/volga.jpg/" target="_blank" rel="noopener noreferrer"><i
-                                class="fa fa-instagram" alt="Instagram"></i></a></li>
+                    <li><a href="mailto:antoniovolgarino@gmail.com"><i class="fa fa-envelope" alt="Email"></i></a></li>
                     <li><a href="https://github.com/piopy" target="_blank" rel="noopener noreferrer"><i
                                 class="fa fa-github" alt="GitHub"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/antonio-volgarino/" target="_blank"
                             rel="noopener noreferrer"><i class="fa fa-linkedin" alt="LinkedIn"></i></a></li>
-                    <li><a href="https://t.me/volga_txt" target="_blank" rel="noopener noreferrer"><i
-                                class="fa fa-telegram" alt="Telegram"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -79,15 +78,14 @@
                             IT!</i><br><br>
                         <div class="col-md-12">
                             <div class="col-md-12 col-sm-12" style="padding-bottom: 10px;">
-                                <a href="https://flowcv.com/resume/dkid7tvs9b" class="btn section-btn smoothScroll" target="_blank">Download my
-                                    resume</a>
+                                <a href="mailto:antoniovolgarino@gmail.com" class="btn section-btn">Get in touch</a>
                             </div>
                             <div class="col-md-12 col-sm-12" style="padding-bottom: 10px;">
-                                <a href="#contact" class="btn section-btn smoothScroll">Contact me!</a>
+                                <a href="#projects" class="btn section-btn smoothScroll">View my work</a>
                             </div>
                             <div class="col-md-12 col-sm-12">
-                                <a href="https://nbviewer.org/github/piopy/" class="btn section-btn smoothScroll"
-                                    target="_blank">My Repo</a>
+                                <a href="https://github.com/piopy" class="btn section-btn" target="_blank"
+                                    rel="noopener noreferrer">GitHub Profile</a>
                             </div>
                         </div>
                     </div>
@@ -135,6 +133,24 @@
     </section>
 
 
+    <!-- WORK EXPERIENCE -->
+    <section id="experience" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h2>Work Experience</h2>
+                        <span class="line-bar">...</span>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12" id="work-experience-container">
+                    <!-- Work experience content will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- technologies -->
     <section id="technologies" data-stellar-background-ratio="0.5">
         <div class="container">
@@ -176,25 +192,21 @@
         </div>
     </section>
 
-    <!-- social -->
-    <section id="social" data-stellar-background-ratio="0.5">
+    <!-- ARTICLES -->
+    <section id="articles" data-stellar-background-ratio="0.5" style="display: none;">
         <div class="container">
             <div class="row">
-                <center>
-                    <div class="col-md-12 col-sm-12">
-                        <div class="section-title">
-                            <h2>Social Profiles</h2>
-                            <br>
-                            <p style="text-align: center;">Where you can find me online.</p>
-                            <span class="line-bar">...</span>
-                        </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title text-center">
+                        <h2>Articles & Publications</h2>
+                        <br>
+                        <p style="text-align: center;">Technical writing and contributions.</p>
+                        <span class="line-bar">...</span>
                     </div>
-
-                    <div id="social-profiles-container" class="row">
-                        <!-- I profili social verranno aggiunti dinamicamente qui -->
-                    </div>
-
-                </center>
+                </div>
+                <div id="articles-container" class="col-md-12">
+                    <!-- JavaScript will fill in the articles here -->
+                </div>
             </div>
         </div>
     </section>
@@ -205,37 +217,51 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title">
-                        <h2>Contact me</h2>
+                        <h2>Get In Touch</h2>
                         <br>
-                        <p style="text-align: center;">Where to find me in real life.</p>
+                        <p style="text-align: center;">Feel free to reach out for collaborations or just a friendly
+                            hello.</p>
                         <span class="line-bar">...</span>
                     </div>
                 </div>
-                <div class="col-md-8 col-sm-8">
-                    <form id="contact-form" role="form" action="https://formspree.io/f/mnqwgylr" method="post">
-                        <div class="col-md-12 col-sm-12">
-                            <input type="email" class="form-control" placeholder="Your Email" id="cf-email" name="email"
-                                required="">
+
+                <!-- Contact Info Card -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="contact-info-card">
+                        <h3>Contact Information</h3>
+
+                        <div class="contact-detail">
+                            <i class="fa fa-envelope"></i>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:antoniovolgarino@gmail.com">antoniovolgarino@gmail.com</a>
                         </div>
-                        <div class="col-md-12 col-sm-12">
-                            <textarea class="form-control" rows="6" placeholder="Message here" id="cf-message"
-                                name="message" required=""></textarea>
+
+                        <div class="contact-detail">
+                            <i class="fa fa-map-marker"></i>
+                            <strong>Location:</strong><br>
+                            Bologna, Italy
                         </div>
-                        <div class="col-md-4 col-sm-12">
-                            <input type="submit" class="form-control" name="submit" value="Send Message">
+
+                        <div class="contact-detail">
+                            <i class="fa fa-github"></i>
+                            <strong>GitHub:</strong><br>
+                            <a href="https://github.com/piopy" target="_blank"
+                                rel="noopener noreferrer">github.com/piopy</a>
                         </div>
-                    </form>
-                </div>
-                <!-- <div class="col-md-4 col-sm-4">
-                    <div class="google-map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d182105.2771513688!2d11.34468!3d44.507063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd498e951c40b%3A0xa2e17c015ba49441!2sBologna%20BO!5e0!3m2!1sit!2sit!4v1650405242360!5m2!1sit!2sit"
-                            allowfullscreen></iframe>
+
+                        <div class="contact-detail">
+                            <i class="fa fa-linkedin"></i>
+                            <strong>LinkedIn:</strong><br>
+                            <a href="https://www.linkedin.com/in/antonio-volgarino/" target="_blank"
+                                rel="noopener noreferrer">antonio-volgarino</a>
+                        </div>
                     </div>
-                </div> -->
-                <div class="col-md-4 col-sm-4">
+                </div>
+
+                <!-- Map -->
+                <div class="col-md-6 col-sm-12">
                     <div class="google-map">
-                        <div id="map" style="height: 300px;"></div>
+                        <div id="map"></div>
                     </div>
                 </div>
 
@@ -243,7 +269,7 @@
                 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
                 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
                 <script>
-                    var map = L.map('map').setView([44.4949, 11.3426], 13);
+                    var map = L.map('map').setView([44.4938, 11.3428], 13);
 
                     // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     //     attribution: '&copy; OpenStreetMap contributors'
@@ -295,6 +321,9 @@
     <script src="data/contacts.js"></script>
     <script src="data/tech.js"></script>
     <script src="data/about.js"></script>
+    <script src="data/work-experience.js"></script>
+    <script src="data/articles.js"></script>
+    <script src="js/easter-egg.js"></script>
 
 </body>
 
