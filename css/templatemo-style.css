@@ -185,7 +185,9 @@ section {
   margin-bottom: 30px;
   padding: 20px;
   text-align: center;
-  height: 400px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-image {
@@ -198,13 +200,19 @@ section {
   margin: 0 auto;
 }
 
+.project-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .project-details h3 {
   margin-top: 0;
 }
 
 @media screen and (max-width: 992px) {
   .project-card {
-    height: auto;
+    min-height: 350px;
   }
 }
 

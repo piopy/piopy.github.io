@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             { name: "Docker [compose]", description: "Containerized application platform", url: "https://www.docker.com", icon: "images/tech/docker.svg"},
             { name: "Terraform", description: "Infrastructure as code", url: "https://www.terraform.io", icon: "images/tech/terraform.svg"},
             { name: "Dagster", description: "Data orchestration framework", url: "https://dagster.io", icon: "images/tech/dagster.png"},
+            { name: "Locust", description: "Load testing tool", url: "https://locust.io", icon: "images/tech/locust.png"},
             { name: "FastAPI", description: "High-performance API framework", url: "https://fastapi.tiangolo.com", icon: "images/tech/fastapi.svg"},
             { name: "Taipy", description: "Data HTML apps for Python", url: "https://www.taipy.io", icon: "images/tech/taipy.svg"},
             { name: "Streamlit", description: "Data HTML apps for Python", url: "https://streamlit.io", icon: "images/tech/streamlit.svg"},
@@ -79,8 +80,29 @@ document.addEventListener("DOMContentLoaded", function () {
         let scrollSpeed = 0;
         let req;
 
-        const minScrollLimit = -(inner.scrollWidth - container.offsetWidth + 100);
-        const maxScrollLimit = 100;
+        let minScrollLimit = -(inner.scrollWidth - container.offsetWidth + 100);
+        let maxScrollLimit = 100;
+
+        // Funzione per aggiornare i limiti di scroll
+        const updateScrollLimits = () => {
+            minScrollLimit = -(inner.scrollWidth - container.offsetWidth + 100);
+            maxScrollLimit = 100;
+            
+            // Assicurati che lo scroll corrente sia nei nuovi limiti
+            if (scrollAmount < minScrollLimit) {
+                scrollAmount = minScrollLimit;
+            } else if (scrollAmount > maxScrollLimit) {
+                scrollAmount = maxScrollLimit;
+            }
+            
+            inner.style.transform = `translateX(${scrollAmount}px)`;
+            
+            // Aggiorna la visibilità delle frecce
+            leftArrow.style.visibility = (scrollAmount >= maxScrollLimit - 1) ? 'hidden' : 'visible';
+            leftArrow.style.opacity = (scrollAmount >= maxScrollLimit - 1) ? '0' : '1';
+            rightArrow.style.visibility = (scrollAmount <= minScrollLimit + 1) ? 'hidden' : 'visible';
+            rightArrow.style.opacity = (scrollAmount <= minScrollLimit + 1) ? '0' : '1';
+        };
 
         const scroll = () => {
             scrollAmount += scrollSpeed;
@@ -172,6 +194,11 @@ document.addEventListener("DOMContentLoaded", function () {
         container.addEventListener("touchend", () => {
             isDragging = false;
         }, { passive: true });
+
+        // Gestione del ridimensionamento della finestra
+        window.addEventListener("resize", () => {
+            updateScrollLimits();
+        });
 
     }
 

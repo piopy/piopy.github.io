@@ -13,7 +13,7 @@ const projects = [
     description: "Crypt files with password (AES256)",
     link: "https://github.com/piopy/SimpleAES",
     image: "images/github-projects.png",
-    tags: ["C#", "AES", "Cryptography"]
+    tags: ["C#", "Cryptography", "Security" ]
   },
   {
     name: "adcatch",
@@ -21,7 +21,7 @@ const projects = [
     description: "Ad-blocker for Windows",
     link: "https://github.com/piopy/adcatch",
     image: "images/github-projects.png",
-    tags: ["C#", "Windows", "Networking"]
+    tags: ["C#", "Windows", "Ad-Blocker"]
   },
   {
     name: "pio-bot",
@@ -45,7 +45,7 @@ const projects = [
     description: "University project - Teaching a NAO robot playing tower of Hanoi using two ML algorithms",
     link: "https://github.com/piopy/HaNAO-Tower",
     image: "images/github-projects.png",
-    tags: ["Python", "Machine Learning", "Robotics"]
+    tags: ["Python", "Machine Learning"]
   },
   {
     name: "fantacalcio-py",
@@ -53,7 +53,7 @@ const projects = [
     description: "Manipulation of datasets applied to Italian fantasy football",
     link: "https://github.com/piopy/fantacalcio-py",
     image: "images/github-projects.png",
-    tags: ["Python", "Pandas", "Data Analysis"]
+    tags: ["Python", "Pandas","Fantasy Football", "Data Analysis"]
   },
   {
     name: "Pz8 (offline)",
@@ -61,7 +61,7 @@ const projects = [
     description: "Global and Legal IPTV website (username: utente, password: piopy). Currently offline due to Heroku's new policy on free hosting hours.",
     link: "https://youtu.be/pFptt7Cargc",
     image: "images/web.png",
-    tags: ["Python", "Flask", "Web Development"]
+    tags: ["Python", "Flask", "Scraping", "IPTV"]
   },
   {
     name: "CCVpy",
@@ -77,7 +77,7 @@ const projects = [
     description: "Budget management using python",
     link: "https://github.com/piopy/solexiv",
     image: "images/github-projects.png",
-    tags: ["Python", "Data Management"]
+    tags: ["Python", "Data Management", "Docker", "Streamlit", "MongoDB"]
   },
   {
     name: "PFN [Collaboration]",
@@ -101,7 +101,7 @@ const projects = [
     description: "For when you 'accidentally' format your Linux. Instantly restores VS Code, Docker, Spotify & your sanity.",
     link: "https://github.com/piopy/oops-i-did-it-again-setup",
     image: "images/github-projects.png",
-    tags: ["Bash", "Linux", "Automation", "DevOps"]
+    tags: ["Bash", "Linux", "Automation"]
   },
   {
     name: "promptmap-API [Fork]",
@@ -109,7 +109,7 @@ const projects = [
     description: "A security scanner for custom LLM API",
     link: "https://github.com/piopy/promptmap-API",
     image: "images/github-projects.png",
-    tags: ["Python", "LLM", "Security", "API"]
+    tags: ["Python", "LLM", "Security", "Prompt injection testing"]
   },
   {
     name: "Domingo [VIBE]",
@@ -117,7 +117,7 @@ const projects = [
     description: "FastAPI project that uses the Gemini API and the fact that calls are free to facilitate language learning through LLM",
     link: "https://github.com/piopy/domingo",
     image: "images/github-projects.png",
-    tags: ["Python", "FastAPI", "LLM", "Gemini", "Education"]
+    tags: ["Python", "FastAPI", "LLM", "Education", "Language Learning", "Vibe"]
   },
   {
     name: "Ceppa [VIBE]",
@@ -125,7 +125,7 @@ const projects = [
     description: "E-learning app powered by LLM knowledge.",
     link: "https://github.com/piopy/ceppa/",
     image: "images/github-projects.png",
-    tags: ["Python", "LLM", "Education", "Web App"]
+    tags: ["Python", "LLM", "Education", "FastAPI", "Vibe"]
   }
   // {
   //   name: "TBD",

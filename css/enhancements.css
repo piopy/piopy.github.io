@@ -269,6 +269,7 @@ body:not(.dark-mode) .separator {
     border-radius: 10px;
     border-left: 4px solid #ff9019;
     transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 #contact .contact-detail:hover {
@@ -446,6 +447,9 @@ body:not(.dark-mode) #contact .contact-detail:hover {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
 }
 
 .project-card:hover {
