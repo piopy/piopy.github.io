@@ -51,6 +51,7 @@
     list-style: none;
     padding: 0;
     margin: 20px 0 0 0;
+    text-align: left !important;
 }
 
 .accomplishments-list li {
@@ -58,6 +59,7 @@
     position: relative;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
+    text-align: left !important;
 }
 
 .accomplishments-list li::before {

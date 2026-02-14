@@ -29,23 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
     };
 
-    // Combina tutte le tecnologie in un unico array per lo scroll
-    const allTechs = [...techCategories.known, ...techCategories.learning];
+    function setupTechnologies(container, techs) {
+        if (!container) {
+            console.error("Contenitore non trovato!");
+            return;
+        }
 
-    const container = document.querySelector("#technologies .tech-scroll-container");
-
-    if (!container) {
-        console.error("Contenitore non trovato!");
-        return;
-    }
-
-    function setupTechnologies() {
         container.innerHTML = '';
 
         const inner = document.createElement("div");
         inner.className = "tech-scroll-inner";
 
-        allTechs.forEach(tech => {
+        techs.forEach(tech => {
             const box = document.createElement("div");
             box.className = "tech-box";
             box.innerHTML = `
@@ -79,12 +74,28 @@ document.addEventListener("DOMContentLoaded", function () {
         let scrollAmount = 0;
         let scrollSpeed = 0;
         let req;
+        let needsScroll = false;
 
         let minScrollLimit = -(inner.scrollWidth - container.offsetWidth + 100);
         let maxScrollLimit = 100;
 
         // Funzione per aggiornare i limiti di scroll
         const updateScrollLimits = () => {
+            // Controlla se il contenuto è effettivamente più largo del container
+            needsScroll = inner.scrollWidth > container.offsetWidth;
+            
+            if (!needsScroll) {
+                // Se non serve lo scroll, nascondi le frecce e blocca lo scroll
+                leftArrow.style.display = 'none';
+                rightArrow.style.display = 'none';
+                scrollAmount = 0;
+                inner.style.transform = 'translateX(0)';
+                return;
+            }
+            
+            leftArrow.style.display = 'flex';
+            rightArrow.style.display = 'flex';
+            
             minScrollLimit = -(inner.scrollWidth - container.offsetWidth + 100);
             maxScrollLimit = 100;
             
@@ -105,6 +116,8 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         const scroll = () => {
+            if (!needsScroll) return; // Non fare nulla se non serve lo scroll
+            
             scrollAmount += scrollSpeed;
 
             if (scrollAmount > maxScrollLimit) {
@@ -128,7 +141,12 @@ document.addEventListener("DOMContentLoaded", function () {
         leftArrow.style.opacity = '0';
         rightArrow.style.opacity = '0';
 
+        // Inizializza i limiti di scroll
+        updateScrollLimits();
+
         container.addEventListener("mouseenter", () => {
+            if (!needsScroll) return; // Non fare nulla se non serve lo scroll
+            
             if (scrollAmount < maxScrollLimit - 1) {
                 leftArrow.style.opacity = '1';
             }
@@ -140,6 +158,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         container.addEventListener("mousemove", (e) => {
+            if (!needsScroll) return; // Non fare nulla se non serve lo scroll
+            
             const rect = container.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const middle = rect.width / 2;
@@ -148,6 +168,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         container.addEventListener("mouseleave", () => {
+            if (!needsScroll) return; // Non fare nulla se non serve lo scroll
+            
             leftArrow.style.opacity = '0';
             rightArrow.style.opacity = '0';
             cancelAnimationFrame(req);
@@ -161,6 +183,8 @@ document.addEventListener("DOMContentLoaded", function () {
         let startScrollAmount = 0;
 
         container.addEventListener("touchstart", (e) => {
+            if (!needsScroll) return; // Non fare nulla se non serve lo scroll
+            
             touchStartX = e.touches[0].clientX;
             startScrollAmount = scrollAmount;
             isDragging = true;
@@ -169,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, { passive: true });
 
         container.addEventListener("touchmove", (e) => {
-            if (!isDragging) return;
+            if (!isDragging || !needsScroll) return;
             
             touchCurrentX = e.touches[0].clientX;
             const deltaX = touchCurrentX - touchStartX;
@@ -202,5 +226,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    setupTechnologies();
+    // Inizializza entrambe le sezioni
+    const knownContainer = document.querySelector("#tech-known-container");
+    const learningContainer = document.querySelector("#tech-learning-container");
+
+    setupTechnologies(knownContainer, techCategories.known);
+    setupTechnologies(learningContainer, techCategories.learning);
 });
