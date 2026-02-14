@@ -3,6 +3,9 @@
     position: relative;
     padding: 20px 0;
     min-height: 190px; /* Previene il collasso del contenitore */
+    touch-action: pan-x; /* Permette lo scroll orizzontale su touch */
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .tech-scroll-inner {
@@ -25,13 +28,13 @@
 .tech-box {
     flex: 0 0 auto;
     width: 150px;
-    height: 150px;
-    background: #ffffff;
+    height: 175px;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     padding-top: 10px;
     flex-direction: column;
     margin-right: 20px;
@@ -40,6 +43,7 @@
 
 .tech-box:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .tech-box img {
@@ -50,14 +54,17 @@
 .tech-box span {
     font-size: 14px;
     font-weight: bold;
+    color: #333;
+    text-align: center;
 }
 
 .tech-box p {
     margin: 5px 0 0;
     text-align: center;
     font-size: 12px;
-    color: #555;
+    color: #666;
     line-height: 16px !important;
+    padding: 0 8px;
 }
 
 /* --- Stili per le frecce di scorrimento (Solo Desktop) --- */
@@ -142,21 +149,23 @@
     .scroll-arrow {
         display: none;
     }
+}
 
+/* Dark mode support for tech boxes */
+body.dark-mode .tech-box {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 144, 25, 0.3);
+}
 
+body.dark-mode .tech-box:hover {
+    background: rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 144, 25, 0.6);
+}
 
-    /* .tech-box {
-        flex: 0 0 auto;
-        width: 150px;
-        height: 150px;
-        background: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-right: 20px;
-        transition: transform 0.2s ease;
-    } */
+body.dark-mode .tech-box span {
+    color: #ffffff;
+}
+
+body.dark-mode .tech-box p {
+    color: #cccccc;
 }

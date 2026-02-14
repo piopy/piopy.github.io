@@ -1,0 +1,541 @@
+/* Enhanced Styles - Glassmorphism and New Features */
+
+/* ========================================
+   WORK EXPERIENCE SECTION
+   ======================================== */
+
+.work-experience-item {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.work-experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 144, 25, 0.5);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.job-header h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.company-highlight {
+    color: #ff9019;
+    font-weight: 600;
+}
+
+.job-meta {
+    font-size: 0.9em;
+    color: #cccccc;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.job-meta .separator {
+    margin: 0 10px;
+    color: #ff9019;
+}
+
+.accomplishments-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.accomplishments-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.accomplishments-list li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #ff9019;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Dark mode support */
+body.dark-mode .work-experience-item {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .job-header h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .job-meta {
+    color: #cccccc;
+}
+
+body.dark-mode .accomplishments-list li {
+    color: #e0e0e0;
+}
+
+/* Light mode - mantiene sfondo scuro */
+body:not(.dark-mode) .work-experience-item {
+    background: rgba(30, 30, 30, 0.85);
+}
+
+body:not(.dark-mode) .work-experience-item:hover {
+    background: rgba(30, 30, 30, 0.95);
+}
+
+/* ========================================
+   ARTICLES SECTION
+   ======================================== */
+
+.article-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 144, 25, 0.3);
+}
+
+.article-header h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.article-header h3 a {
+    color: #333;
+    transition: color 0.3s;
+}
+
+.article-header h3 a:hover {
+    color: #ff9019;
+}
+
+.article-meta {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.article-description {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.article-tags {
+    margin-bottom: 15px;
+}
+
+.article-tag {
+    display: inline-block;
+    background: rgba(255, 144, 25, 0.15);
+    color: #ff9019;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+
+.article-link {
+    color: #ff9019;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.article-link:hover {
+    color: #ff7019;
+    text-decoration: none;
+}
+
+body.dark-mode .article-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .article-header h3 a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .article-meta {
+    color: #bbb;
+}
+
+body.dark-mode .article-description {
+    color: #d0d0d0;
+}
+
+/* ========================================
+   PROJECT TAGS
+   ======================================== */
+
+.project-tags {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.project-tag {
+    display: inline-block;
+    background: rgba(255, 144, 25, 0.1);
+    color: #ff9019;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 0.75em;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.project-tag:hover {
+    background: rgba(255, 144, 25, 0.2);
+    transform: scale(1.05);
+}
+
+/* ========================================
+   ENHANCED PROJECT CARDS - GLASSMORPHISM
+   ======================================== */
+
+.project-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 144, 25, 0.3);
+}
+
+.project-image {
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.project-image img {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.08);
+}
+
+.project-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-details h3,
+.project-details h3 a {
+    color: #333;
+}
+
+.project-details p,
+.project-details small {
+    color: #444;
+}
+
+body.dark-mode .project-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .project-details h3,
+body.dark-mode .project-details h3 a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .project-details p,
+body.dark-mode .project-details small {
+    color: #d0d0d0;
+}
+
+/* ========================================
+   TECHNOLOGIES SCROLL - NEW LAYOUT
+   ======================================== */
+
+.tech-category-section {
+    margin-bottom: 40px;
+}
+
+.tech-category-title {
+    text-align: center;
+    font-size: 1.3em;
+    color: #ff9019;
+    margin-bottom: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tech-scroll-row {
+    overflow: hidden;
+    padding: 20px 0;
+    position: relative;
+}
+
+.tech-scroll-track {
+    display: flex;
+    gap: 20px;
+    will-change: transform;
+}
+
+.tech-box {
+    flex-shrink: 0;
+    width: 180px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.tech-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 144, 25, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tech-box img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.tech-box span {
+    display: block;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.tech-box p {
+    font-size: 0.75em;
+    color: #666;
+    margin: 0;
+    text-align: center;
+}
+
+body.dark-mode .tech-box {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .tech-box span {
+    color: #e0e0e0;
+}
+
+body.dark-mode .tech-box p {
+    color: #bbb;
+}
+
+body.dark-mode .tech-category-title {
+    color: #ff9019;
+}
+
+/* Keyframes for scrolling animations */
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ========================================
+   SPACE INVADERS EASTER EGG
+   ======================================== */
+
+#space-invaders-game {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.game-overlay {
+    background: rgba(20, 20, 20, 0.9);
+    border: 2px solid #ff9019;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game-header h2 {
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 2em;
+    margin: 0;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.game-close {
+    background: #ff0000;
+    border: none;
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    line-height: 1;
+}
+
+.game-close:hover {
+    background: #ff3333;
+    transform: scale(1.1);
+}
+
+#gameCanvas {
+    border: 2px solid #333;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    background: #000;
+}
+
+.game-controls {
+    margin-top: 20px;
+    color: #ccc;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+}
+
+.game-controls p {
+    margin: 8px 0;
+    color: #ccc;
+    text-align: center;
+}
+
+#game-score {
+    font-size: 1.2em;
+    color: #00ff00;
+    font-weight: bold;
+}
+
+/* ========================================
+   PROJECT CARD LAYOUT
+   ======================================== */
+
+/* Ensure equal height for project cards in grid */
+#projects-container .col-md-4,
+#projects-container .col-sm-6,
+#projects-container .col-lg-4 {
+    display: flex;
+}
+
+/* ========================================
+   RESPONSIVE IMPROVEMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+    .work-experience-item,
+    .article-card,
+    .project-card {
+        padding: 20px;
+    }
+    
+    .project-card {
+        min-height: 350px;
+    }
+
+    .tech-box {
+        width: 150px;
+        padding: 15px;
+    }
+
+    #space-invaders-game .game-overlay {
+        padding: 15px;
+        width: 95%;
+    }
+
+    #gameCanvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* ========================================
+   SMOOTH SCROLL ENHANCEMENTS
+   ======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 70px;
+}

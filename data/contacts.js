@@ -1,9 +1,9 @@
 const socialProfiles = [
     {
-        name: "Instagram",
-        link: "https://www.instagram.com/volga.jpg/",
-        image: "images/instagram.png",
-        description: "Private instagram page"
+        name: "Email",
+        link: "mailto:antoniovolgarino@gmail.com",
+        image: "images/github-sign.png", // Temporary - sostituire con email.png quando disponibile
+        description: "Get in touch"
     },
     {
         name: "GitHub",
@@ -15,13 +15,7 @@ const socialProfiles = [
         name: "LinkedIn",
         link: "https://www.linkedin.com/in/antonio-volgarino/",
         image: "images/linkedin.png",
-        description: ""
-    },
-    {
-        name: "Telegram",
-        link: "https://t.me/volga_txt",
-        image: "images/telegram.png",
-        description: ""
+        description: "Professional network"
     }
 ];
 
