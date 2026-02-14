@@ -1,5 +1,6 @@
 // Esperienza lavorativa e accomplishments
 const workExperience = [
+    // Aggiungi altre esperienze qui se necessario
     {
         company: "Zanichelli Editore",
         role: "Data Engineer",
@@ -13,8 +14,17 @@ const workExperience = [
             // "Built and maintained data orchestration workflows with Dagster",
             // "Collaborated with cross-functional teams to optimize data platform architecture"
         ]
+    },
+    {
+        company: "Zanichelli Editore",
+        role: "Intern",
+        period: "2022",
+        location: "Bologna, Italy",
+        accomplishments: [
+            "Implementation of a data lake structure in the corporate cloud environment using Terraform;",
+            "Automated data retrieval from web sources using ECS containers orchestrated with Step Functions (AWS) and subsequent organization of records in warehouse-like structures"
+        ]
     }
-    // Aggiungi altre esperienze qui se necessario
 ];
 
 function populateWorkExperience() {

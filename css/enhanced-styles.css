@@ -13,6 +13,11 @@
     padding: 30px;
     margin-bottom: 30px;
     transition: all 0.3s ease;
+    text-align: left !important;
+}
+
+.work-experience-item * {
+    text-align: left !important;
 }
 
 .work-experience-item:hover {
@@ -26,6 +31,7 @@
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #ffffff;
+    text-align: left !important;
 }
 
 .company-highlight {
@@ -49,6 +55,7 @@
     list-style: none;
     padding-left: 0;
     margin-top: 15px;
+    text-align: left !important;
 }
 
 .accomplishments-list li {
@@ -56,6 +63,7 @@
     padding-left: 25px;
     margin-bottom: 12px;
     line-height: 1.6;
+    text-align: left !important;
     color: #e0e0e0;
 }
 
@@ -66,6 +74,7 @@
     color: #ff9019;
     font-size: 1.2em;
     font-weight: bold;
+    text-align: left !important;
 }
 
 /* Dark mode support */
