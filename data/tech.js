@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             { name: "Docker [compose]", description: "Containerized application platform", url: "https://www.docker.com", icon: "images/tech/docker.svg"},
             { name: "Terraform", description: "Infrastructure as code", url: "https://www.terraform.io", icon: "images/tech/terraform.svg"},
             { name: "Dagster", description: "Data orchestration framework", url: "https://dagster.io", icon: "images/tech/dagster.png"},
+            { name: "dbt", description: "Engineering tool for transforming data in warehouses", url: "https://www.getdbt.com/", icon: "images/tech/dbt.svg" },
             { name: "Locust", description: "Load testing tool", url: "https://locust.io", icon: "images/tech/locust.png"},
             { name: "FastAPI", description: "High-performance API framework", url: "https://fastapi.tiangolo.com", icon: "images/tech/fastapi.svg"},
             { name: "Taipy", description: "Data HTML apps for Python", url: "https://www.taipy.io", icon: "images/tech/taipy.svg"},
@@ -17,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
             { name: "PostgreSQL", description: "Advanced SQL database", url: "https://www.postgresql.org", icon: "images/tech/postgresql.svg"},
             { name: "MongoDB", description: "NoSQL document database", url: "https://www.mongodb.com", icon: "images/tech/mongodb.svg"},
             { name: "Various LLMs", description: "Open & closed-source language models", url: "https://huggingface.co", icon: "images/tech/huggingface.svg"},
+            { name: "LangGraph", description: "Agent runtime and low-level orchestration framework", url: "https://www.langchain.com/langgraph", icon: "images/tech/langgraph.svg"},
+            { name: "LangFuse", description: "Agent flow observability and evaluation", url: "https://langfuse.com/", icon: "images/tech/langfuse-icon.svg"},
             { name: "Slack", description: "Team communication tool", url: "https://slack.com", icon: "images/tech/slack.svg"},
             { name: "Linux", description: "Open-source OS", url: "https://www.kernel.org", icon: "images/tech/linux.svg"},
             { name: "Bash", description: "Shell scripting language", url: "https://www.gnu.org/software/bash/", icon: "images/tech/bash.svg"},
@@ -24,8 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ],
         learning: [
             { name: "GCP", description: "Cloud computing platform", url: "https://cloud.google.com", icon: "images/tech/gcp.svg" },
-            { name: "Metabase", description: "Open-source business intelligence and analytics platform", url: "https://www.metabase.com/", icon: "images/tech/metabase.svg" },
-            { name: "DBT", description: "Engineering tool for transforming data in warehouses", url: "https://www.getdbt.com/", icon: "images/tech/dbt.svg" }
+            { name: "Apache Superset", description: "Open-source business intelligence and analytics platform", url: "https://superset.apache.org/", icon: "images/tech/apachesuperset.svg" }
         ]
     };
 

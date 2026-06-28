@@ -1,14 +1,14 @@
 // Articoli pubblicati o in arrivo
 const articles = [
     // Esempio di struttura - rimuovi il commento e popola quando l'articolo sarà pronto:
-    // {
-    //     title: "Building Modern Data Pipelines with Dagster",
-    //     date: "2026-03-15",
-    //     publication: "Medium",
-    //     link: "https://medium.com/@yourhandle/article-slug",
-    //     description: "A deep dive into orchestrating data workflows with Dagster and best practices for data engineering teams.",
-    //     tags: ["Data Engineering", "Dagster", "Python"]
-    // }
+    {
+        title: "AI and Accessibility: Describing STEM Images with Alt Texts and Extended Descriptions",
+        date: "2026-06",
+        publication: "CSUN",
+        link: "https://scholarworks.calstate.edu/concern/publications/2j62sf53r",
+        description: "This research proposes a hybrid intelligence approach combining rapid model output with expert validation as the only ethically sound solution to enhance STEM accessibility and foster inclusive knowledge dissemination.",
+        tags: ["Digital Accessibility","Accessible Images","AI","Accessible Publishing","Alt Text"]
+    }
 ];
 
 function populateArticles() {

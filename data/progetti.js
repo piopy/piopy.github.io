@@ -32,20 +32,12 @@ const projects = [
     tags: ["Python", "Telegram API", "Web Scraping"]
   },
   {
-    name: "instaWiper",
-    year: 2021,
-    description: "Fast instagram post archiver / eraser",
-    link: "https://github.com/piopy/instaWiper",
-    image: "images/github-projects.png",
-    tags: ["Python", "Selenium", "Automation"]
-  },
-  {
     name: "HaNAO-Tower",
     year: 2021,
     description: "University project - Teaching a NAO robot playing tower of Hanoi using two ML algorithms",
     link: "https://github.com/piopy/HaNAO-Tower",
     image: "images/github-projects.png",
-    tags: ["Python", "Machine Learning"]
+    tags: ["Python", "Machine Learning", "NAO Robot"]
   },
   {
     name: "fantacalcio-py",
@@ -54,14 +46,6 @@ const projects = [
     link: "https://github.com/piopy/fantacalcio-py",
     image: "images/github-projects.png",
     tags: ["Python", "Pandas","Fantasy Football", "Data Analysis"]
-  },
-  {
-    name: "Pz8 (offline)",
-    year: 2022,
-    description: "Global and Legal IPTV website (username: utente, password: piopy). Currently offline due to Heroku's new policy on free hosting hours.",
-    link: "https://youtu.be/pFptt7Cargc",
-    image: "images/web.png",
-    tags: ["Python", "Flask", "Scraping", "IPTV"]
   },
   {
     name: "CCVpy",
@@ -88,17 +72,9 @@ const projects = [
     tags: ["Python", "Streamlit", "Finance", "Data Visualization"]
   },
   {
-    name: "Wallpaper-map-generator",
-    year: 2024,
-    description: "Using streamlit + prettymap to generate wallpapers of your city",
-    link: "https://github.com/piopy/wallpaper-map-generator",
-    image: "images/github-projects.png",
-    tags: ["Python", "Streamlit", "Visualization"]
-  },
-  {
     name: "oops-i-did-it-again-setup",
     year: 2025,
-    description: "For when you 'accidentally' format your Linux. Instantly restores VS Code, Docker, Spotify & your sanity.",
+    description: "For when you 'accidentally' format your Linux. Restores VS Code, Docker, Spotify & your sanity.",
     link: "https://github.com/piopy/oops-i-did-it-again-setup",
     image: "images/github-projects.png",
     tags: ["Bash", "Linux", "Automation"]
@@ -125,7 +101,7 @@ const projects = [
     description: "E-learning app powered by LLM knowledge.",
     link: "https://github.com/piopy/ceppa/",
     image: "images/github-projects.png",
-    tags: ["Python", "LLM", "Education", "FastAPI", "Vibe"]
+    tags: ["Python", "LLM", "Education", "Vibe"]
   }
   // {
   //   name: "TBD",

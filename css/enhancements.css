@@ -102,28 +102,29 @@ body:not(.dark-mode) .separator {
    ARTICLES SECTION
    ============================================ */
 .article-card {
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
     padding: 25px;
     margin-bottom: 30px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
 
 .article-card:hover {
-    background: rgba(255, 255, 255, 0.05);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 144, 25, 0.3);
 }
 
 .article-header h3 {
-    font-size: 22px;
+    font-size: 1.4em;
     margin-bottom: 10px;
 }
 
 .article-header h3 a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -133,41 +134,58 @@ body:not(.dark-mode) .separator {
 }
 
 .article-meta {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85em;
+    color: #666;
     margin-bottom: 15px;
 }
 
 .article-description {
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
+    color: #444;
     margin-bottom: 15px;
 }
 
 .article-tags {
-    margin: 15px 0;
+    margin-bottom: 15px;
 }
 
 .article-tag {
     display: inline-block;
-    background: rgba(255, 144, 25, 0.2);
+    background: rgba(255, 144, 25, 0.15);
     color: #ff9019;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8em;
     margin-right: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .article-link {
     color: #ff9019;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    font-weight: 500;
+    transition: all 0.3s;
 }
 
 .article-link:hover {
-    color: #fff;
+    color: #ff7019;
+    text-decoration: none;
+}
+
+body.dark-mode .article-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .article-header h3 a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .article-meta {
+    color: #bbb;
+}
+
+body.dark-mode .article-description {
+    color: #d0d0d0;
 }
 
 /* ============================================
