@@ -7,12 +7,12 @@ const workExperience = [
         period: "2023 - Present",
         location: "Bologna, Italy",
         accomplishments: [
-            // "Template placeholder - work in progress"
-            // "Contributed to designing and implementing data models for analytics pipelines",
-            // "Developed a Taipy-based frontend dashboard for internal data visualization",
-            // "Implemented Infrastructure as Code solutions using Terraform for cloud resources",
-            // "Built and maintained data orchestration workflows with Dagster",
-            // "Collaborated with cross-functional teams to optimize data platform architecture"
+            "Develop end-to-end data pipelines in Python using an OOP approach, managing idempotency, partitioning, and checkpointing logic;",
+            "Orchestrate data flows (ELT/ETL) using Dagster and dbt;",
+            "Independently design and manage part of the company's AWS cloud infrastructure using Terraform (IaC), ensuring security via IAM least-privilege and OIDC;",
+            "Define CI/CD pipelines via Bitbucket Pipelines or Jenkins+Ansible to automate Docker image deployment, optimizing builds through multi-stage processes and uv;",
+            "Ensure data integrity (Data Quality) by implementing automated tests on dbt and Dagster asset checks;",
+            "Translate business needs into technical solutions: gather requirements, negotiate feasibility, and rapidly develop interactive dashboards using Taipy or Streamlit."
         ]
     },
     {
@@ -21,8 +21,8 @@ const workExperience = [
         period: "2022",
         location: "Bologna, Italy",
         accomplishments: [
-            "Implementation of a data lake structure in the corporate cloud environment using Terraform;",
-            "Automated data retrieval from web sources using ECS containers orchestrated with Step Functions (AWS) and subsequent organization of records in warehouse-like structures"
+            "Implemented a data lake architecture in the corporate cloud environment using Terraform.",
+            "Automated data retrieval from web sources using ECS containers orchestrated with AWS Step Functions, organizing records into warehouse-like structures."
         ]
     }
 ];
