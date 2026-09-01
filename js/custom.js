@@ -31,7 +31,8 @@
     
 
     // MAGNIFIC POPUP
-    $('.image-popup').magnificPopup({
+    if ($.fn.magnificPopup) {
+      $('.image-popup').magnificPopup({
         type: 'image',
         removalDelay: 300,
         mainClass: 'mfp-with-zoom',
@@ -52,50 +53,77 @@
         // you don't need to add "opener" option if this code matches your needs, it's defailt one.
         return openerElement.is('img') ? openerElement : openerElement.find('img');
         }
-      }
-    });
+        }
+      });
+    }
 
 
     // SMOOTH SCROLL
     $(function() {
       $('.custom-navbar a:not(#dark-mode-toggle), #home a').on('click', function(event) {
-        var $anchor = $(this);
-          $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 49
-          }, 1000);
-            event.preventDefault();
+        var href = $(this).attr('href');
+        if (!href || href.charAt(0) !== '#') return;
+        var $anchor = $(href);
+        if (!$anchor.length) return;
+        $('html, body').stop().animate({
+          scrollTop: $anchor.offset().top - 60
+        }, 600, 'swing');
+        event.preventDefault();
       });
     });  
 
-    // DARK MODE
+    // GOTO TOP
+    $(function() {
+      $('#myBtn').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').stop().animate({ scrollTop: 0 }, 500, 'swing');
+      });
+    });
+
+    // DARK / LIGHT MODE (dark default, light via .light-mode)
     $(function() {
         const darkModeToggle = $('#dark-mode-toggle');
         const body = $('body');
         const moonIcon = 'fa-moon-o';
         const sunIcon = 'fa-sun-o';
 
-        // Funzione per applicare il tema
-        function applyTheme(isDarkMode) {
-            if (isDarkMode) {
-                body.addClass('dark-mode');
+        function applyTheme(isLight) {
+            if (isLight) {
+                body.addClass('light-mode');
                 darkModeToggle.find('i').removeClass(moonIcon).addClass(sunIcon);
             } else {
-                body.removeClass('dark-mode');
+                body.removeClass('light-mode');
                 darkModeToggle.find('i').removeClass(sunIcon).addClass(moonIcon);
             }
         }
 
-        // Controlla il localStorage al caricamento della pagina
-        let isDarkMode = localStorage.getItem('darkMode') === 'true';
-        applyTheme(isDarkMode);
+        let isLight = localStorage.getItem('lightMode') === 'true';
+        applyTheme(isLight);
 
-        // Gestisce il click sul pulsante
         darkModeToggle.on('click', function(e) {
             e.preventDefault();
-            isDarkMode = !isDarkMode;
-            localStorage.setItem('darkMode', isDarkMode);
-            applyTheme(isDarkMode);
+            isLight = !isLight;
+            localStorage.setItem('lightMode', isLight);
+            applyTheme(isLight);
         });
+    });
+
+    // SCROLL REVEAL
+    $(function() {
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduce || !('IntersectionObserver' in window)) {
+            $('.reveal').addClass('in');
+            return;
+        }
+        const io = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        $('.reveal').each(function() { io.observe(this); });
     });
 
 })(jQuery);

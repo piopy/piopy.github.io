@@ -15,26 +15,21 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/templatemo-style.css">
-    <link rel="stylesheet" href="css/css-tech.css">
-    <link rel="stylesheet" href="css/dark-mode.css">
-    <link rel="stylesheet" href="css/enhancements.css">
+    <link rel="stylesheet" href="css/piopy.css">
 
 </head>
 
 <body>
+    <script>document.documentElement.classList.add('js');</script>
+
     <!-- PRE LOADER -->
     <section class="preloader">
-        <div class="spinner">
-            <span class="spinner-rotate"></span>
-        </div>
+        <div class="spinner"></div>
     </section>
 
     <!-- MENU -->
     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-        <a href="#home" class="smoothScroll" id="myBtn"> ^ </a>
         <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -68,26 +63,39 @@
     </section>
 
     <!-- HOME -->
-    <section id="home" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
+    <section id="home">
+        <div class="home-bg-sheen"></div>
+        <div class="hero-fade"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-7 col-sm-12">
                     <div class="home-info">
-                        <h1>Hi there!</h1>
-                        <i style="color: white; opacity:85%;">I'm a data engineer and a developer based in Bologna,
-                            IT!</i><br><br>
-                        <div class="col-md-12">
-                            <div class="col-md-12 col-sm-12" style="padding-bottom: 10px;">
-                                <a href="mailto:antoniovolgarino@gmail.com" class="btn section-btn">Get in touch</a>
-                            </div>
-                            <div class="col-md-12 col-sm-12" style="padding-bottom: 10px;">
-                                <a href="#projects" class="btn section-btn smoothScroll">View my work</a>
-                            </div>
-                            <div class="col-md-12 col-sm-12">
-                                <a href="https://github.com/piopy" class="btn section-btn" target="_blank"
-                                    rel="noopener noreferrer">GitHub Profile</a>
-                            </div>
+                        <div class="home-kicker">
+                            <span class="home-status"><span class="dot"></span> /home/bologna</span>
+                        </div>
+                        <h1>Hi there!<span class="cursor"></span></h1>
+                        <p class="home-sub"><strong>I'm a data engineer and a developer</strong> based in Bologna, IT!
+                        </p>
+                        <div class="home-cta">
+                            <a href="mailto:antoniovolgarino@gmail.com" class="btn section-btn">Get in touch</a>
+                            <a href="#projects" class="btn section-btn btn-ghost smoothScroll">View my work</a>
+                            <a href="https://github.com/piopy" class="btn section-btn btn-ghost" target="_blank"
+                                rel="noopener noreferrer">GitHub Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <div class="home-terminal reveal">
+                        <div class="term-head">
+                            <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
+                            <span class="t-title">piopy — zsh</span>
+                        </div>
+                        <div class="term-body">
+                            <div class="t-line"><span class="t-prompt">$</span> whoami <span class="t-out">→</span> <span class="t-val">antonio</span></div>
+                            <div class="t-line"><span class="t-prompt">$</span> pwd <span class="t-out">→</span> <span class="t-val">/usr/piopy</span></div>
+                            <div class="t-line"><span class="t-prompt">$</span> role <span class="t-out">→</span> <span class="t-val">data-engineer</span></div>
+                            <!-- <div class="t-line"><span class="t-prompt">$</span> employer <span class="t-out">→</span> <span class="t-val">Zanichelli Editore</span></div> -->
+                            <div class="t-line"><span class="t-prompt">$</span> location <span class="t-out">→</span> <span class="t-val">Bologna, IT</span></div>
                         </div>
                     </div>
                 </div>
@@ -96,44 +104,36 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="bout" data-stellar-background-ratio="0.5">
+    <section id="bout">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="section-title">
-                        <h2>About me</h2>
-                        <span class="line-bar">...</span>
+                <div class="col-md-4 col-sm-12">
+                    <div class="about-side">
+                        <div class="profile-photo">
+                            <img src="images/home-bg.jpg" alt="Antonio Volgarino">
+                        </div>
+                        <div class="name-title">whoami<span class="cursor"></span></div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12" style="padding-bottom: 20px;" id="about-me-container">
+                <div class="col-md-8 col-sm-12" id="about-me-container">
                     <!-- About me content will be populated dynamically -->
                 </div>
-                <!-- <div class="col-md-6 col-sm-12">
-                    <div class="col-lg">
-                        <div class="github stats" id="github-stats-1">
-                            <div class="gh stars">
-                                <img align="center" src="https://img.shields.io/github/stars/piopy"
-                                    style="border: none;" alt="GitHub Stars">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             </div>
+        </div>
     </section>
 
 
     <!-- WORK EXPERIENCE -->
-    <section id="experience" data-stellar-background-ratio="0.5">
+    <section id="experience">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title">
                         <h2>Work Experience</h2>
-                        <span class="line-bar">...</span>
+                        <span class="line-bar"></span>
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12" id="work-experience-container">
+                <div class="col-md-12 col-sm-12 reveal" id="work-experience-container">
                     <!-- Work experience content will be populated dynamically -->
                 </div>
             </div>
@@ -141,46 +141,46 @@
     </section>
 
 
-    <!-- technologies -->
-    <section id="technologies" data-stellar-background-ratio="0.5">
+    <!-- TECHNOLOGIES -->
+    <section id="technologies">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 text-center">
                     <div class="section-title">
                         <h2>Technologies I Use</h2>
-                        <span class="line-bar">...</span>
+                        <span class="line-bar"></span>
                     </div>
                 </div>
 
                 <div class="col-md-12 col-sm-12">
-                    <h3 style="text-align: center; margin-bottom: 20px; color: #ff9019;">Current Stack</h3>
-                    <div class="tech-scroll-container" id="tech-known-container">
-                    </div>
+                    <div class="tech-sec-label"><span class="dash">$</span> known_tools</div>
+                    <div class="tech-sec-desc">// current stack</div>
+                    <div class="tech-scroll-container" id="tech-known-container"></div>
                 </div>
 
-                <div class="col-md-12 col-sm-12" style="margin-top: 40px;">
-                    <h3 style="text-align: center; margin-bottom: 20px; color: #ff9019;">Learning</h3>
-                    <div class="tech-scroll-container" id="tech-learning-container">
-                    </div>
+                <div class="col-md-12 col-sm-12" style="margin-top: 48px;">
+                    <div class="tech-sec-label"><span class="dash">$</span> learning</div>
+                    <div class="tech-sec-desc">// in progress</div>
+                    <div class="tech-scroll-container" id="tech-learning-container"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    
     <!-- CERTIFICATIONS -->
-    <section id="certifications" data-stellar-background-ratio="0.5" style="display: none;">
+    <section id="certifications" style="display: none;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title text-center">
+                        <div class="sec-label">certifications</div>
                         <h2>Certifications</h2>
                         <br>
                         <p style="text-align: center;">Professional certifications and credentials.</p>
-                        <span class="line-bar">...</span>
+                        <span class="line-bar"></span>
                     </div>
                 </div>
-                <div id="certifications-container" class="col-md-12">
+                <div id="certifications-container" class="col-md-12 reveal">
                     <!-- JavaScript will fill in the certifications here -->
                 </div>
             </div>
@@ -189,20 +189,21 @@
 
 
     <!-- PROJECTS -->
-    <section id="projects" data-stellar-background-ratio="0.5">
+    <section id="projects">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title text-center">
+                        <div class="sec-label">projects</div>
                         <h2>Projects</h2>
                         <br>
-                        <p style="text-align: center;">A few things I've built.</p>
-                        <span class="line-bar">...</span>
+                        <p class="sec-sub" style="text-align: center;">A few things I've built.</p>
+                        <span class="line-bar"></span>
                     </div>
                 </div>
 
                 <!-- Projects will be populated dynamically from the JavaScript file -->
-                <div id="projects-container" class="col-md-12 d-flex justify-content-center">
+                <div id="projects-container" class="col-md-12 d-flex justify-content-center reveal">
                     <!-- JavaScript will fill in the projects here -->
                 </div>
             </div>
@@ -210,18 +211,18 @@
     </section>
 
     <!-- ARTICLES -->
-    <section id="articles" data-stellar-background-ratio="0.5" style="display: none;">
+    <section id="articles" style="display: none;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title text-center">
-                        <h2>Articles & Publications</h2>
+                        <h2>Articles &amp; Publications</h2>
                         <br>
                         <p style="text-align: center;">Technical writing and contributions.</p>
-                        <span class="line-bar">...</span>
+                        <span class="line-bar"></span>
                     </div>
                 </div>
-                <div id="articles-container" class="col-md-12">
+                <div id="articles-container" class="col-md-12 reveal">
                     <!-- JavaScript will fill in the articles here -->
                 </div>
             </div>
@@ -229,16 +230,17 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" data-stellar-background-ratio="0.5">
+    <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title">
+                        <div class="sec-label">contact</div>
                         <h2>Get In Touch</h2>
                         <br>
-                        <p style="text-align: center;">Feel free to reach out for collaborations or just a friendly
-                            hello.</p>
-                        <span class="line-bar">...</span>
+                        <p class="sec-sub" style="text-align: left;">Feel free to reach out for collaborations or just a
+                            friendly hello.</p>
+                        <span class="line-bar"></span>
                     </div>
                 </div>
 
@@ -249,28 +251,36 @@
 
                         <div class="contact-detail">
                             <i class="fa fa-envelope"></i>
-                            <strong>Email:</strong><br>
-                            <a href="mailto:antoniovolgarino@gmail.com">antoniovolgarino@gmail.com</a>
+                            <div>
+                                <strong>EMAIL</strong>
+                                <a href="mailto:antoniovolgarino@gmail.com">antoniovolgarino@gmail.com</a>
+                            </div>
                         </div>
 
                         <div class="contact-detail">
                             <i class="fa fa-map-marker"></i>
-                            <strong>Location:</strong><br>
-                            Bologna, Italy
+                            <div>
+                                <strong>LOCATION</strong>
+                                <span>Bologna, Italy</span>
+                            </div>
                         </div>
 
                         <div class="contact-detail">
                             <i class="fa fa-github"></i>
-                            <strong>GitHub:</strong><br>
-                            <a href="https://github.com/piopy" target="_blank"
-                                rel="noopener noreferrer">github.com/piopy</a>
+                            <div>
+                                <strong>GITHUB</strong>
+                                <a href="https://github.com/piopy" target="_blank"
+                                    rel="noopener noreferrer">github.com/piopy</a>
+                            </div>
                         </div>
 
                         <div class="contact-detail">
                             <i class="fa fa-linkedin"></i>
-                            <strong>LinkedIn:</strong><br>
-                            <a href="https://www.linkedin.com/in/antonio-volgarino/" target="_blank"
-                                rel="noopener noreferrer">antonio-volgarino</a>
+                            <div>
+                                <strong>LINKEDIN</strong>
+                                <a href="https://www.linkedin.com/in/antonio-volgarino/" target="_blank"
+                                    rel="noopener noreferrer">antonio-volgarino</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -284,50 +294,41 @@
                 <!-- Leaflet CSS e JS -->
                 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
                 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-                <script>
-                    var map = L.map('map').setView([44.4938, 11.3428], 13);
-
-                    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    //     attribution: '&copy; OpenStreetMap contributors'
-                    // }).addTo(map);
-
-                    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-                        attribution: '&copy; OpenStreetMap & CartoDB',
-                        subdomains: 'abcd',
-                        maxZoom: 19
-                    }).addTo(map);
-
-                    // L.marker([44.4949, 11.3426]).addTo(map)
-                    //     .bindPopup('Bologna')
-                    //     .openPopup();
+<script>
+                    if (typeof L !== 'undefined') {
+                        var map = L.map('map').setView([44.4938, 11.3428], 14);
+                        // Esri Light Gray — no API key required.
+                        // Dark mode inverts tiles via CSS (.leaflet-tile-pane).
+                        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+                            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, OpenStreetMap',
+                            maxZoom: 19
+                        }).addTo(map);
+                        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+                            maxZoom: 19
+                        }).addTo(map);
+                    }
                 </script>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer data-stellar-background-ratio="0.5">
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="copyright-text">
-                        <center>
-                            <p style="text-align: center;">Copyright &copy; 2025 piopy</p>
-                            <p style="text-align: center;">Created modifying <a
-                                    href="https://templatemo.com/tm-509-hydro" style="color:#ff9019;"
-                                    target="_blank">Hydro Template</a>'s files</p>
-                            <p style="text-align: center;">Social icons are property of <a
-                                    href="https://www.flaticon.com/" style="color:#ff9019;"
-                                    target="_blank">flaticon.com</a>
-                                and <a href="https://simpleicons.org/" style="color:#ff9019;"
-                                    target="_blank">simpleicons.org</a>
-                            </p>
-                        </center>
+                        <p>Copyright &copy; 2025 piopy</p>
+                        <p>Social icons are property of <a href="https://www.flaticon.com/" target="_blank">flaticon.com</a>
+                            and <a href="https://simpleicons.org/" target="_blank">simpleicons.org</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- GOTO TOP -->
+    <a href="#home" id="myBtn"> ^ </a>
 
     <!-- SCRIPTS -->
     <script src="js/jquery.js"></script>
